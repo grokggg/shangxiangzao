@@ -1,7 +1,0 @@
-Usage of /usr/bin/envd:
-  -commit
-    	print envd source commit
-  -port int
-    	a port on which the daemon should run (default 49983)
-  -version
-    	print envd version

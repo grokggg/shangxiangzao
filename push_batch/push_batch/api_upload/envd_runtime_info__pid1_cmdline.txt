@@ -1,1 +1,0 @@
-/bin/bash /usr/local/bin/ags_runtime_entrypoint.sh 

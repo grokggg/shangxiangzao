@@ -1,1 +1,0 @@
-{'path': '/data/workspace/gateway_dump.pkl', 'size': 390853}

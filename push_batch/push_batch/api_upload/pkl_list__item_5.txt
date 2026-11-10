@@ -1,1 +1,0 @@
-{'path': '/data/workspace/entry_dump.pkl', 'size': 109199}

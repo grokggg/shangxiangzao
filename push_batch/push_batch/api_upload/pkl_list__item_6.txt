@@ -1,1 +1,0 @@
-{'path': '/data/workspace/envd_info.pkl', 'size': 4111}
