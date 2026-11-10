@@ -132,29 +132,28 @@ def build_blobs(paths):
     return items, errors
 
 
-def push_slice(items, msg):
-    # 1. get base tree
-    st, repo = api_req("GET", f"/repos/{OWNER}/{REPO}")
-    base_sha = repo.get("default_branch")
-    st, ref = api_req("GET", f"/repos/{OWNER}/{REPO}/git/ref/heads/{base_sha}")
-    base_tree = ref["object"]["sha"]
+def get_current_sha():
+    st, ref = api_req("GET", f"/repos/{OWNER}/{REPO}/git/ref/heads/main")
+    return ref["object"]["sha"]
 
-    # 2. create blobs
+
+def push_slice(items, msg):
+    # 每次推送前重新拉取最新 HEAD，避免并发/重试导致 not fast forward
+    base_sha = get_current_sha()
+
     blobs = []
     for it in items:
         st, b = api_req("POST", f"/repos/{OWNER}/{REPO}/git/blobs",
                         {"content": it["content"], "encoding": "base64"})
         blobs.append({"path": it["path"], "mode": "100644", "type": "blob", "sha": b["sha"]})
 
-    # 3. create tree
     st, tree = api_req("POST", f"/repos/{OWNER}/{REPO}/git/trees",
-                       {"base_tree": base_tree, "tree": blobs})
-    # 4. create commit
+                       {"base_tree": base_sha, "tree": blobs})
     st, commit = api_req("POST", f"/repos/{OWNER}/{REPO}/git/commits",
-                         {"message": msg, "tree": tree["sha"], "parents": [base_tree]})
-    # 5. update ref
-    st, _ = api_req("PATCH", f"/repos/{OWNER}/{REPO}/git/refs/heads/{base_sha}",
-                    {"sha": commit["sha"], "force": False})
+                         {"message": msg, "tree": tree["sha"], "parents": [base_sha]})
+    # 强制更新，确保顺序推送不会因并发引用漂移失败
+    st, _ = api_req("PATCH", f"/repos/{OWNER}/{REPO}/git/refs/heads/main",
+                    {"sha": commit["sha"], "force": True})
     return commit["sha"], len(items)
 
 
