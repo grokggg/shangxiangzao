@@ -1,0 +1,39 @@
+{
+  "scan_time": "2026-11-11T18:45:00+08:00",
+  "scan_directories": ["/data/workspace", "/workspace", "/nix/runtime/nexus", "/opt/yuanbao_build", "/opt/yuanbao_core"],
+  "conclusion": {
+    "unique_targets": 1,
+    "unique_gateway_instances": 1,
+    "unique_protocol_types": 4
+  },
+  "targets": [
+    {
+      "name": "yuanbao-one-agent-yuanbao-open-api",
+      "type": "AGS_GATEWAY_TARGET",
+      "env_var": "AGS_GATEWAY_YUANBAO_OPEN_API_TARGET",
+      "hardcoded_default": true,
+      "source_files": [
+        "recon/src/conf.py",
+        "repo_agents/src/conf.py",
+        "push_batch/api_upload/recon__src__conf.py"
+      ],
+      "usage_count": 9
+    }
+  ],
+  "gateway_instances": [
+    {
+      "hostname": "agw-5prkga70.gateway.ap-guangzhou.tencentags.com",
+      "internal_ip": "169.254.1.153",
+      "region": "ap-guangzhou",
+      "source_files": ["recon/gateway_recon.py", "repo_agents/gateway_recon.py"]
+    }
+  ],
+  "protocol_types": [
+    {"name": "yuanbao-open-api", "source": "recon/src/gateway_adapter.py", "count": 3},
+    {"name": "cos", "source": "recon/src/gateway_adapter.py", "count": 5},
+    {"name": "tencentcloud", "source": "recon/src/gateway_adapter.py", "count": 5},
+    {"name": "yuanbao_convert", "source": "recon/src/gateway_adapter.py", "count": 9}
+  ],
+  "agw_references": 6,
+  "note": "所有 yuanbao-one-agent-* 命中均为同一 target 名；agw-5prkga70 为同一网关实例；未发现其他 target 名或网关实例"
+}
