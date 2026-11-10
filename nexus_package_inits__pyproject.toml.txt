@@ -1,0 +1,252 @@
+
+[project]
+name = "nexus-agent"
+version = "1.8.5"
+description = ""
+readme = "README.md"
+authors = [
+    { name = "tarschen" }
+]
+requires-python = ">=3.10,<3.15"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "aiohttp>=3.9",
+    "aiosqlite>=0.21.0",
+    "mcp>=1.26.0,<2",
+    "omegaconf>=2.3.0",
+    "openai>=2.8.0",
+    "packaging>=24.0",
+    "pip>=25.3",
+    "psutil>=7.1.3",
+    "pydantic>=2.11.0",
+    "PyYAML>=6.0",
+    "python-socketio[asyncio_client]>=5.11.0",
+    "rich>=14.2.0",
+    "tenacity>=9.1.2",
+    "textual>=1.0.0",
+    "tqdm>=4.67.1",
+    "tomli>=2.0.0; python_version < '3.11'",
+    "async-timeout>=4.0.0; python_version < '3.11'",
+]
+
+[project.scripts]
+nexus = "nexus.cli.main:main"
+
+[project.entry-points.opentelemetry_instrumentor]
+nexus-subprocess = "nexus.utils.otel.subprocess:NexusSubprocessInstrumentor"
+
+[project.optional-dependencies]
+runtime = [
+    "aiomonitor>=0.7.1",
+    # Keep FastAPI/Uvicorn server extras explicit. fastapi-cli depends on
+    # uvicorn[standard], which would pull upstream uvloop alongside uvloop-snapshot.
+    "colorama>=0.4; sys_platform == 'win32'",
+    "email-validator>=2.0.0",
+    "fastapi>=0.121.3",
+    "httptools>=0.6.3",
+    "httpx>=0.23.0",
+    "jinja2>=3.1.5",
+    "pillow>=10.0.0",
+    "pydantic-extra-types>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "pyautogui>=0.9.54",
+    "python-dotenv>=0.13",
+    "python-multipart>=0.0.18",
+    "uvicorn>=0.34.0",
+    "uvloop-snapshot==0.22.1.post1; sys_platform != 'win32'",
+    "watchfiles>=0.13",
+    "websockets>=10.4",
+]
+otel = [
+    "opentelemetry-distro>=0.51b0",
+    "opentelemetry-exporter-otlp-proto-http>=1.30.0",
+    "opentelemetry-instrumentation-asgi>=0.51b0",
+    "opentelemetry-instrumentation-fastapi>=0.51b0",
+    "opentelemetry-instrumentation-aiohttp-client>=0.51b0",
+    "opentelemetry-instrumentation-aiohttp-server>=0.51b0",
+    "opentelemetry-instrumentation-httpx>=0.51b0",
+    "opentelemetry-instrumentation-requests>=0.51b0",
+    "opentelemetry-instrumentation-logging>=0.51b0",
+    "opentelemetry-instrumentation-sqlalchemy>=0.51b0",
+    "opentelemetry-instrumentation-redis>=0.51b0",
+    "opentelemetry-instrumentation-mysql>=0.51b0",
+]
+workload = []
+builder = [
+    "auditwheel>=6.5.0,<7.0.0",
+    "build>=1.3.0,<2.0.0",
+    "setuptools>=80.9.0,<81.0.0",
+    "wheel>=0.46.3,<1.0.0",
+]
+cloud = [
+    "pathspec>=0.12.1,<2.0.0",
+    "zstandard>=0.23.0",
+]
+distributed = [
+    "aiomonitor>=0.7.1",
+    "alembic>=1.16.0",
+    "asyncmy>=0.2.14",
+    "cryptography>=46.0.0",
+    "opentelemetry-api>=1.30.0",
+    "pathspec>=0.12.1,<2.0.0",
+    "py-spy>=0.4.0",
+    "sqlalchemy>=2.0.0",
+    "uvloop-snapshot==0.22.1.post1; sys_platform != 'win32'",
+    "zstandard>=0.23.0",
+    "tencentcloud-sdk-python-common>=3.1.148,<4.0.0",
+    "tencentcloud-sdk-python-dcdb>=3.1.125,<4.0.0",
+]
+distributed-db-shell = [
+    "mycli>=1.30.0,<1.32.0",
+]
+dev = [
+    "opentelemetry-distro>=0.51b0",
+    "opentelemetry-exporter-otlp-proto-http>=1.30.0",
+    "ruff==0.15.8",
+    "pre-commit>=3.7.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.1.1",
+    "ty==0.0.14",
+    "mkdocs>=1.6.1,<2.0",
+    "mkdocs-material>=9.5.0",
+    "mkdocs-minify-plugin>=0.8.0",
+    "mkdocs-awesome-pages-plugin>=2.10.1",
+    "mkdocs-jupyter==0.25.1",
+    "mkdocs-open-in-new-tab>=1.0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["nexus"]
+artifacts = ["nexus/extensions/agents/swe_setup_agent/**/*.md"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"deployment/docker/Dockerfile.runtime" = "nexus/_bundle/deployment/docker/Dockerfile.runtime"
+"deployment/runtime/start.sh" = "nexus/_bundle/deployment/runtime/start.sh"
+"deployment/runtime/gui_stack.sh" = "nexus/_bundle/deployment/runtime/gui_stack.sh"
+"deployment/runtime/docker-bootstrap.sh" = "nexus/_bundle/deployment/runtime/docker-bootstrap.sh"
+"deployment/runtime/dind-runc.sh" = "nexus/_bundle/deployment/runtime/dind-runc.sh"
+"deployment/runtime/flake.nix" = "nexus/_bundle/deployment/runtime/flake.nix"
+"deployment/runtime/flake.lock" = "nexus/_bundle/deployment/runtime/flake.lock"
+"deployment/runtime/bash/bc_common.c" = "nexus/_bundle/deployment/runtime/bash/bc_common.c"
+"deployment/runtime/bash/bc_common.h" = "nexus/_bundle/deployment/runtime/bash/bc_common.h"
+"deployment/runtime/bash/cmd_wrap.c" = "nexus/_bundle/deployment/runtime/bash/cmd_wrap.c"
+"deployment/runtime/bash/readline_wrap.c" = "nexus/_bundle/deployment/runtime/bash/readline_wrap.c"
+"pyproject.toml" = "nexus/_bundle/pyproject.toml"
+"README.md" = "nexus/_bundle/README.md"
+"nexus/runtime/server/debug.html" = "nexus/runtime/server/debug.html"
+"nexus/runtime/bridge/requirements.txt" = "nexus/runtime/bridge/requirements.txt"
+"nexus/runner/live/static/index.html" = "nexus/runner/live/static/index.html"
+"nexus/extensions/tasks/aidata/engine/confine" = "nexus/extensions/tasks/aidata/mock_servers/confine"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+fix = true
+src = ["nexus", "services/apps/*/src", "services/packages/*/src"]
+extend-exclude = [
+    "tests/*",
+    "docs/*",
+    "*.md",
+    "nexus/extensions/tasks/ace/ACEBench/**",
+    "nexus/extensions/tasks/waa/metrics/**",
+]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "N", "B", "A", "C4", "T20", "PT", "RET", "SIM", "TCH"]
+ignore = [
+    "T201",   # print
+    "E501",   # line too long
+    "B008",   # flask Depends call
+    "SIM117", # combine with statements
+    "TCH",    # do not move unused imports to if TYPE_CHECKING
+    "A005",   # module shadows standard library (using full import paths)
+]
+fixable = ["A", "B", "C", "E", "F", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+
+[tool.ruff.lint.per-file-ignores]
+# BFCL handler method names must match BaseHandler's API (e.g. _query_FC).
+"nexus/extensions/tasks/bfclv4/handler.py" = ["N802", "B905"]
+# swe_builder eval uses UPPER_CASE regex constants inside functions for readability.
+"nexus/extensions/tasks/swe_builder/eval.py" = ["N806", "E402"]
+# swe_setup_agent tools uses UPPER_CASE constants and single-char loop vars.
+"nexus/extensions/agents/swe_setup_agent/tools.py" = ["N806", "E741"]
+# These names mirror the Wiki Skill's public JSON tool contract.
+"nexus/extensions/agents/yb_one_agent/skill_tools/wiki/tools.py" = ["N815"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+lines-between-types = 1
+force-single-line = false
+order-by-type = true
+relative-imports-order = "closest-to-furthest"
+case-sensitive = true
+known-first-party = ["nexus", "label", "infra"]
+
+[tool.ruff.lint.flake8-type-checking]
+strict = true
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore:.*Jupyter is migrating.*:DeprecationWarning",
+    "ignore::pytest.PytestUnraisableExceptionWarning",
+]
+markers = [
+    "e2e: end-to-end tests that may require external services",
+    "integration: integration tests that may require local Docker or external runtime services",
+    "gui: GUI desktop runtime tests",
+    "gongfeng: Gongfeng remote runtime tests",
+    "llm: tests that call an LLM service",
+]
+asyncio_default_fixture_loop_scope = "function"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ty.src]
+exclude = [
+    "nexus/extensions/tasks/mcp_benchmark/image/helpers/**",
+    "nexus/extensions/tasks/ace/ACEBench/**",
+    "nexus/extensions/tasks/waa/metrics/**",
+]
+
+[tool.ty.rules]
+unresolved-import = "ignore"
+unused-ignore-comment = "ignore"
+
+[tool.coverage.run]
+source = ["nexus"]
+omit = ["tests/*", "workspace/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+]
+
+[[tool.uv.index]]
+name = "tencent-internal"
+url = "https://mirrors.tencent.com/repository/pypi/tencent_pypi/simple"
+
+[tool.uv.workspace]
+members = [
+    "services/apps/*",
+    "services/packages/*",
+]
+
+[tool.uv]
+constraint-dependencies = [
+    "requests>=2.33.1",  # chardet 7.x compat (requests <2.33 hardcodes chardet<6)
+    "websockets>=10.4,<16",  # Harbor's supabase/realtime host dependency requires websockets<16
+]
+
+[tool.uv.sources]
+cloudtestapi = { index = "tencent-internal" }

@@ -1,0 +1,203 @@
+{
+ "push_batch/api_upload/gateway_recon.py": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   "//agw-5prkga70.gateway.ap-guangzhou.tencentags.com\",⏎        \"dns_resolution\": \"169.254.1.153\",⏎        \"target_name\": \"yuanbao-one-agent-yuanbao-open-api\",⏎        \"origin_host_whitelist\": \"open-api.yuanbao.tencent.com\",⏎        \"routing_format\": \"/targets/{target_name}/{o",
+   "       \"observed_responses\": {⏎            \"GET /\": \"404\",⏎            \"GET /targets\": \"403\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api\": \"404\",⏎            \"GET /health\": \"200\",⏎            \"GET /healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-age",
+   "uanbao-open-api\": \"404\",⏎            \"GET /health\": \"200\",⏎            \"GET /healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\"",
+   "healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat",
+   "targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"40",
+   "4\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎        }⏎    },⏎    \"yuanbao_convert\": {⏎        \"package_path\": \"/usr/local/lib/pytho"
+  ]
+ },
+ "push_batch/api_upload/recon__recon_data.json": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   " \"https://agw-5prkga70.gateway.ap-guangzhou.tencentags.com\",⏎    \"dns_resolution\": \"169.254.1.153\",⏎    \"target_name\": \"yuanbao-one-agent-yuanbao-open-api\",⏎    \"origin_host_whitelist\": \"open-api.yuanbao.tencent.com\",⏎    \"routing_format\": \"/targets/{target_name}/{original_",
+   "e}/{original_path}\",⏎    \"observed_responses\": {⏎      \"GET /\": \"404\",⏎      \"GET /targets\": \"403\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api\": \"404\",⏎      \"GET /health\": \"200\",⏎      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-ap",
+   "uanbao-one-agent-yuanbao-open-api\": \"404\",⏎      \"GET /health\": \"200\",⏎      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404",
+   "      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/compl",
+   "\"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎   ",
+   "/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎    }⏎  },⏎  \"yuanbao_convert\": {⏎    \"package_path\": \"/usr/local/lib/python3.10/dist-p"
+  ]
+ },
+ "push_batch/api_upload/recon__src__cloud_sdk_driver.py": {
+  "yuanbao_convert": [
+   "mmon.profile.client_profile import ClientProfile⏎from tencentcloud.common.profile.http_profile import HttpProfile⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.util",
+   "mon.profile.http_profile import HttpProfile⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import tran",
+   "from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class Clou",
+   "yAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CloudSdkDriver(object):⏎    _service_version = {⏎"
+  ]
+ },
+ "push_batch/api_upload/recon__src__conf.py": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   "（/targets/<name>/...）⏎AGS_GATEWAY_YUANBAO_OPEN_API_TARGET = os.environ.get(⏎    \"AGS_GATEWAY_YUANBAO_OPEN_API_TARGET\", \"yuanbao-one-agent-yuanbao-open-api\"⏎)⏎⏎# ========================== 腾讯文档配置 ==========================⏎⏎# 代理配置⏎TENCENT_DOCS_PROXY_PREFIX = os.environ.get(⏎"
+  ]
+ },
+ "push_batch/api_upload/recon__src__cos_sdk_driver.py": {
+  "yuanbao_convert": [
+   "CosConfig⏎from qcloud_cos import CosS3Client⏎from qcloud_cos.cos_exception import CosClientError, CosServiceError⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.util",
+   "tion import CosClientError, CosServiceError⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from ",
+   "from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import tran",
+   "yAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CosS",
+   ".etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CosSdkDriver(object):⏎    @classmethod⏎    def _p"
+  ]
+ },
+ "push_batch/api_upload/recon__src__gateway_adapter.py": {
+  "yuanbao-open-api": [
+   "for AGS Gateway protocol conversion types.\"\"\"⏎    COS = \"cos\"⏎    TENCENTCLOUD = \"tencentcloud\"⏎    YUANBAO_OPEN_API = \"yuanbao-open-api\"⏎⏎⏎class AGSGatewayAdapter(HTTPAdapter):⏎    \"\"\"⏎    Custom HTTP adapter that routes requests through AGS Gateway.⏎⏎   "
+  ]
+ },
+ "push_batch/api_upload/recon__src__ocr_driver.py": {
+  "yuanbao_convert": [
+   "traceback⏎from tencentcloud.common.exception.tencent_cloud_sdk_exception import (⏎    TencentCloudSDKException,⏎)⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.",
+   "tion import (⏎    TencentCloudSDKException,⏎)⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.exceptions import CallOCRServiceException⏎⏎⏎class OcrDriver(object):",
+   "⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.exceptions import CallOCRServiceException⏎⏎⏎class OcrDriver(object):⏎    _component = \"ocr\"⏎⏎    @classmethod⏎   "
+  ]
+ },
+ "push_batch/api_upload/recon__src__tencent_docs_driver.py": {
+  "yuanbao_convert": [
+   "time⏎from typing import Any, Dict, Optional, Tuple⏎from urllib.parse import urlparse, urlunparse⏎⏎import requests⏎⏎from yuanbao_convert.adapter import (⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import c",
+   "quests⏎⏎from yuanbao_convert.adapter import (⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.util",
+   "⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.utils.log import logger⏎⏎⏎class TencentDocsDriver",
+   "from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.utils.log import logger⏎⏎⏎class TencentDocsDriver(object):⏎    _component = \"tencent_docs\"⏎    # 沙箱环境对应的腾讯文档地址⏎    _bas"
+  ]
+ },
+ "push_batch/api_upload/recon__src__yuanbao_sign_adapter.py": {
+  "yuanbao_convert": [
+   "b.parse import urlparse⏎⏎from requests import PreparedRequest, Response⏎from requests.adapters import HTTPAdapter⏎⏎from yuanbao_convert.adapter.yuanbao_sign import build_sign_headers⏎⏎⏎class YuanbaoSignAdapter(HTTPAdapter):⏎    def __init__(self, app_key:"
+  ]
+ },
+ "recon/gateway_recon.py": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   "//agw-5prkga70.gateway.ap-guangzhou.tencentags.com\",⏎        \"dns_resolution\": \"169.254.1.153\",⏎        \"target_name\": \"yuanbao-one-agent-yuanbao-open-api\",⏎        \"origin_host_whitelist\": \"open-api.yuanbao.tencent.com\",⏎        \"routing_format\": \"/targets/{target_name}/{o",
+   "       \"observed_responses\": {⏎            \"GET /\": \"404\",⏎            \"GET /targets\": \"403\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api\": \"404\",⏎            \"GET /health\": \"200\",⏎            \"GET /healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-age",
+   "uanbao-open-api\": \"404\",⏎            \"GET /health\": \"200\",⏎            \"GET /healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\"",
+   "healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat",
+   "targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"40",
+   "4\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎        }⏎    },⏎    \"yuanbao_convert\": {⏎        \"package_path\": \"/usr/local/lib/pytho"
+  ]
+ },
+ "recon/recon_data.json": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   " \"https://agw-5prkga70.gateway.ap-guangzhou.tencentags.com\",⏎    \"dns_resolution\": \"169.254.1.153\",⏎    \"target_name\": \"yuanbao-one-agent-yuanbao-open-api\",⏎    \"origin_host_whitelist\": \"open-api.yuanbao.tencent.com\",⏎    \"routing_format\": \"/targets/{target_name}/{original_",
+   "e}/{original_path}\",⏎    \"observed_responses\": {⏎      \"GET /\": \"404\",⏎      \"GET /targets\": \"403\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api\": \"404\",⏎      \"GET /health\": \"200\",⏎      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-ap",
+   "uanbao-one-agent-yuanbao-open-api\": \"404\",⏎      \"GET /health\": \"200\",⏎      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404",
+   "      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/compl",
+   "\"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎   ",
+   "/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎    }⏎  },⏎  \"yuanbao_convert\": {⏎    \"package_path\": \"/usr/local/lib/python3.10/dist-p"
+  ]
+ },
+ "recon/src/cloud_sdk_driver.py": {
+  "yuanbao_convert": [
+   "mmon.profile.client_profile import ClientProfile⏎from tencentcloud.common.profile.http_profile import HttpProfile⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.util",
+   "mon.profile.http_profile import HttpProfile⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import tran",
+   "from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class Clou",
+   "yAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CloudSdkDriver(object):⏎    _service_version = {⏎"
+  ]
+ },
+ "recon/src/conf.py": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   "（/targets/<name>/...）⏎AGS_GATEWAY_YUANBAO_OPEN_API_TARGET = os.environ.get(⏎    \"AGS_GATEWAY_YUANBAO_OPEN_API_TARGET\", \"yuanbao-one-agent-yuanbao-open-api\"⏎)⏎⏎# ========================== 腾讯文档配置 ==========================⏎⏎# 代理配置⏎TENCENT_DOCS_PROXY_PREFIX = os.environ.get(⏎"
+  ]
+ },
+ "recon/src/cos_sdk_driver.py": {
+  "yuanbao_convert": [
+   "CosConfig⏎from qcloud_cos import CosS3Client⏎from qcloud_cos.cos_exception import CosClientError, CosServiceError⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.util",
+   "tion import CosClientError, CosServiceError⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from ",
+   "from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import tran",
+   "yAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CosS",
+   ".etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CosSdkDriver(object):⏎    @classmethod⏎    def _p"
+  ]
+ },
+ "recon/src/gateway_adapter.py": {
+  "yuanbao-open-api": [
+   "for AGS Gateway protocol conversion types.\"\"\"⏎    COS = \"cos\"⏎    TENCENTCLOUD = \"tencentcloud\"⏎    YUANBAO_OPEN_API = \"yuanbao-open-api\"⏎⏎⏎class AGSGatewayAdapter(HTTPAdapter):⏎    \"\"\"⏎    Custom HTTP adapter that routes requests through AGS Gateway.⏎⏎   "
+  ]
+ },
+ "recon/src/ocr_driver.py": {
+  "yuanbao_convert": [
+   "traceback⏎from tencentcloud.common.exception.tencent_cloud_sdk_exception import (⏎    TencentCloudSDKException,⏎)⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.",
+   "tion import (⏎    TencentCloudSDKException,⏎)⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.exceptions import CallOCRServiceException⏎⏎⏎class OcrDriver(object):",
+   "⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.exceptions import CallOCRServiceException⏎⏎⏎class OcrDriver(object):⏎    _component = \"ocr\"⏎⏎    @classmethod⏎   "
+  ]
+ },
+ "recon/src/tencent_docs_driver.py": {
+  "yuanbao_convert": [
+   "time⏎from typing import Any, Dict, Optional, Tuple⏎from urllib.parse import urlparse, urlunparse⏎⏎import requests⏎⏎from yuanbao_convert.adapter import (⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import c",
+   "quests⏎⏎from yuanbao_convert.adapter import (⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.util",
+   "⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.utils.log import logger⏎⏎⏎class TencentDocsDriver",
+   "from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.utils.log import logger⏎⏎⏎class TencentDocsDriver(object):⏎    _component = \"tencent_docs\"⏎    # 沙箱环境对应的腾讯文档地址⏎    _bas"
+  ]
+ },
+ "recon/src/yuanbao_sign_adapter.py": {
+  "yuanbao_convert": [
+   "b.parse import urlparse⏎⏎from requests import PreparedRequest, Response⏎from requests.adapters import HTTPAdapter⏎⏎from yuanbao_convert.adapter.yuanbao_sign import build_sign_headers⏎⏎⏎class YuanbaoSignAdapter(HTTPAdapter):⏎    def __init__(self, app_key:"
+  ]
+ },
+ "repo_agents/gateway_recon.py": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   "//agw-5prkga70.gateway.ap-guangzhou.tencentags.com\",⏎        \"dns_resolution\": \"169.254.1.153\",⏎        \"target_name\": \"yuanbao-one-agent-yuanbao-open-api\",⏎        \"origin_host_whitelist\": \"open-api.yuanbao.tencent.com\",⏎        \"routing_format\": \"/targets/{target_name}/{o",
+   "       \"observed_responses\": {⏎            \"GET /\": \"404\",⏎            \"GET /targets\": \"403\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api\": \"404\",⏎            \"GET /health\": \"200\",⏎            \"GET /healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-age",
+   "uanbao-open-api\": \"404\",⏎            \"GET /health\": \"200\",⏎            \"GET /healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\"",
+   "healthz\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat",
+   "targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"40",
+   "4\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎            \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎        }⏎    },⏎    \"yuanbao_convert\": {⏎        \"package_path\": \"/usr/local/lib/pytho"
+  ]
+ },
+ "repo_agents/recon_data.json": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   " \"https://agw-5prkga70.gateway.ap-guangzhou.tencentags.com\",⏎    \"dns_resolution\": \"169.254.1.153\",⏎    \"target_name\": \"yuanbao-one-agent-yuanbao-open-api\",⏎    \"origin_host_whitelist\": \"open-api.yuanbao.tencent.com\",⏎    \"routing_format\": \"/targets/{target_name}/{original_",
+   "e}/{original_path}\",⏎    \"observed_responses\": {⏎      \"GET /\": \"404\",⏎      \"GET /targets\": \"403\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api\": \"404\",⏎      \"GET /health\": \"200\",⏎      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-ap",
+   "uanbao-one-agent-yuanbao-open-api\": \"404\",⏎      \"GET /health\": \"200\",⏎      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404",
+   "      \"GET /healthz\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/health\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/compl",
+   "\"GET /targets/yuanbao-one-agent-yuanbao-open-api/open_api/doc_proxy/openapi/drive/v2/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎   ",
+   "/files\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/v1/chat/completions\": \"404\",⏎      \"GET /targets/yuanbao-one-agent-yuanbao-open-api/api/v1/chat/completions\": \"404\"⏎    }⏎  },⏎  \"yuanbao_convert\": {⏎    \"package_path\": \"/usr/local/lib/python3.10/dist-p"
+  ]
+ },
+ "repo_agents/src/cloud_sdk_driver.py": {
+  "yuanbao_convert": [
+   "mmon.profile.client_profile import ClientProfile⏎from tencentcloud.common.profile.http_profile import HttpProfile⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.util",
+   "mon.profile.http_profile import HttpProfile⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import tran",
+   "from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class Clou",
+   "yAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CloudSdkDriver(object):⏎    _service_version = {⏎"
+  ]
+ },
+ "repo_agents/src/conf.py": {
+  "yuanbao-one-agent-yuanbao-open-api": [
+   "（/targets/<name>/...）⏎AGS_GATEWAY_YUANBAO_OPEN_API_TARGET = os.environ.get(⏎    \"AGS_GATEWAY_YUANBAO_OPEN_API_TARGET\", \"yuanbao-one-agent-yuanbao-open-api\"⏎)⏎⏎# ========================== 腾讯文档配置 ==========================⏎⏎# 代理配置⏎TENCENT_DOCS_PROXY_PREFIX = os.environ.get(⏎"
+  ]
+ },
+ "repo_agents/src/cos_sdk_driver.py": {
+  "yuanbao_convert": [
+   "CosConfig⏎from qcloud_cos import CosS3Client⏎from qcloud_cos.cos_exception import CosClientError, CosServiceError⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.util",
+   "tion import CosClientError, CosServiceError⏎⏎from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from ",
+   "from yuanbao_convert.adapter import AGSGatewayAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import tran",
+   "yAdapter, AGSGatewayType⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CosS",
+   ".etc import conf as CONF⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils import exceptions⏎from yuanbao_convert.utils.string_util import transform_string_format_in_recursion⏎⏎⏎class CosSdkDriver(object):⏎    @classmethod⏎    def _p"
+  ]
+ },
+ "repo_agents/src/gateway_adapter.py": {
+  "yuanbao-open-api": [
+   "for AGS Gateway protocol conversion types.\"\"\"⏎    COS = \"cos\"⏎    TENCENTCLOUD = \"tencentcloud\"⏎    YUANBAO_OPEN_API = \"yuanbao-open-api\"⏎⏎⏎class AGSGatewayAdapter(HTTPAdapter):⏎    \"\"\"⏎    Custom HTTP adapter that routes requests through AGS Gateway.⏎⏎   "
+  ]
+ },
+ "repo_agents/src/ocr_driver.py": {
+  "yuanbao_convert": [
+   "traceback⏎from tencentcloud.common.exception.tencent_cloud_sdk_exception import (⏎    TencentCloudSDKException,⏎)⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.",
+   "tion import (⏎    TencentCloudSDKException,⏎)⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.exceptions import CallOCRServiceException⏎⏎⏎class OcrDriver(object):",
+   "⏎⏎from yuanbao_convert.drivers.cloud_sdk_driver import CloudSdkDriver⏎from yuanbao_convert.utils.log import logger⏎from yuanbao_convert.utils.exceptions import CallOCRServiceException⏎⏎⏎class OcrDriver(object):⏎    _component = \"ocr\"⏎⏎    @classmethod⏎   "
+  ]
+ },
+ "repo_agents/src/tencent_docs_driver.py": {
+  "yuanbao_convert": [
+   "time⏎from typing import Any, Dict, Optional, Tuple⏎from urllib.parse import urlparse, urlunparse⏎⏎import requests⏎⏎from yuanbao_convert.adapter import (⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import c",
+   "quests⏎⏎from yuanbao_convert.adapter import (⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.util",
+   "⏎    AGSGatewayAdapter,⏎    AGSGatewayType,⏎    YuanbaoSignAdapter,⏎)⏎from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.utils.log import logger⏎⏎⏎class TencentDocsDriver",
+   "from yuanbao_convert.etc import conf as CONF⏎from yuanbao_convert.utils.exceptions import CallTencentDocsException⏎from yuanbao_convert.utils.log import logger⏎⏎⏎class TencentDocsDriver(object):⏎    _component = \"tencent_docs\"⏎    # 沙箱环境对应的腾讯文档地址⏎    _bas"
+  ]
+ },
+ "repo_agents/src/yuanbao_sign_adapter.py": {
+  "yuanbao_convert": [
+   "b.parse import urlparse⏎⏎from requests import PreparedRequest, Response⏎from requests.adapters import HTTPAdapter⏎⏎from yuanbao_convert.adapter.yuanbao_sign import build_sign_headers⏎⏎⏎class YuanbaoSignAdapter(HTTPAdapter):⏎    def __init__(self, app_key:"
+  ]
+ }
+}

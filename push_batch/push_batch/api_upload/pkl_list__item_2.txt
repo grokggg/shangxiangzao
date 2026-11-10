@@ -1,0 +1,1 @@
+{'path': '/data/workspace/binaries_dump.pkl', 'size': 4941}

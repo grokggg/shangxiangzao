@@ -1,0 +1,156 @@
+=== REAL URLS (104) ===
+
+http://aidata-llm-proxy-pro.polaris:8000/v1
+http://api-reward-platform-api-reward-platform-354ba565.turbotke.production.polaris:10001
+http://api-reward-platform-api-reward-platform-354ba565.turbotke.production.polaris:10001/reward/RewardService
+http://api.cloudtest.woa.com
+http://api.cloudtest.woa.com/
+http://api.model-eval.woa.com
+http://api.model-eval.woa.com/openai/v1
+http://api.model-eval.woa.com/v1
+http://api.taiji.woa.com/openapi/inner/v2
+http://api.taiji.woa.com/openapi/inner/v2/chat/completions
+http://auth.proxy/yuanbao
+http://auth.proxy/yuanbao/cos/tmp/xxx?params
+http://csig.litellm.prod.sgpolaris
+http://httpbin.org/|http://hyrl-httpbin.woa.com/|g
+http://hunyuan-dataset.woa.com
+http://hunyuan.sandbox.test.polaris:8052
+http://hunyuanapi.woa.com/api/workflow/search
+http://hyrl-httpbin.woa.com/
+http://hyrl-proxy.woa.com:3128
+http://hyrl-sandbox.prod.woa.com:8052
+http://hyrl-sandbox.prod.woa.com:8052)
+http://infer-proxy-yb-test.production.polaris:8000/openapi
+http://lean4-server-test-v2.production.polaris:8080
+http://lean4-server-test-v2.production.polaris:8080/check_whole
+http://lean4-verifier-v0d2d0.production.polaris:8080
+http://leansearch-gpu.production.polaris:8080/search
+http://litellm-cn.woa.com
+http://litellm-sgp.woa.com
+http://llm-api.model-eval.woa.com
+http://llm-api.model-eval.woa.com/v1
+http://llm-api.model-eval.woa.com/v1)
+http://llm-api.model-eval.woa.com/v1).
+http://mcp-idc.tapd.woa.com/mcp
+http://mirrors.tencent.com/npm/
+http://mirrors.tencent.com/npm/)
+http://nexus-pool.production.polaris:8080
+http://polaris-discover.woa.com:8080/v1/Discover
+http://sg.auth.tdw.sgwoa.com:8050/api/auth/st2
+http://stream-server-online-openapi.turbotke.production.polaris:8080
+http://stream-server-online-sbs-12509.turbotke.production.polaris:1081/openapi/chat/completions
+http://stream-server-online-toolcall-10103.turbotke.production.polaris:1081/openapi
+http://stream-server-online-toolcall-10103.turbotke.production.polaris:81/openapi
+http://taiji-nexus-dataset-io-dev.woa.com:8080
+http://taiji-nexus-dataset-uc-dev.woa.com:8080
+http://trpc-gpt-eval.production.polaris:8080
+http://trpc-gpt-eval.production.polaris:8080)
+http://trpc-gpt-eval.production.polaris:8080/api/jina_ai/search
+http://trpc-gpt-eval.production.polaris:8080/api/v1/data_eval
+http://trpc-gpt-eval.production.polaris:8080/openai/v1
+http://trpc-gpt-eval.production.polaris:8080/search
+http://webarena-wikipedia.fengluan.woa.com:8080
+http://webarena.eval.prod.polaris.polaris:3000
+http://webarena.eval.prod.polaris.polaris:8888
+http://yb-test.woa.com
+http://yb.woa.com/
+https://agentsandbox-1251707795.cos.ap-guangzhou.myqcloud.com/repo/apk
+https://ags-gw-sample.gateway.ap-guangzhou.tencentags.com
+https://api.hunyuan.cloud.tencent.com/v1/
+https://artifact-nexus-agent.mcp.woa.com
+https://cloud.nexus-agent.woa.com
+https://cloud.tencent.com/document/product/436/121092
+https://control-runner-nexus-agent.mcp.woa.com
+https://git.woa.com/HunYuanRLEnv/MockServer
+https://hunyuan-test-125834...?q-sign-algorithm=sha1&...
+https://hunyuan-test-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/
+https://hunyuan-test-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/***HEX32_REDACTED***/20260515141546_h2_MKZ5_2ed36aa91fd2b906e60f91b6cfe43bc0?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsC
+https://hunyuanaide.taiji.woa.com/...
+https://hy-rl-agent-test-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/cache/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.63/linux-x64/claude
+https://hy-rl-agent-test-1258344706.cos.ap-guangzhou.myqcloud.com/cache/
+https://hy-rl-agent-test-1258344706.cos.ap-guangzhou.myqcloud.com/cache/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.7/linux-x64/claude/claude
+https://hyrl-httpbin.woa.com/delay/10
+https://hyrl-httpbin.woa.com/redirect/5
+https://hyrl-httpbin.woa.com/status/301
+https://iwiki.woa.com/p/4021452048
+https://iwiki.woa.com/p/4021452048)
+https://lizhi-assistant.testsite.woa.com/trpc.search_qa.common.ForwarderProxyHttp/Forward
+https://mcp-api.tencent-cloud.com/sse/7bb631b3c03b41f2
+https://mcp-api.tencent-cloud.com/sse/7bb631b3c03b41f2)
+https://mcpgw.knot.woa.com/gongfeng
+https://mirrors.cloud.tencent.com/composer/
+https://mirrors.cloud.tencent.com/npm/
+https://mirrors.cloud.tencent.com/pypi/simple/
+https://mirrors.tencent.com/composer/
+https://mirrors.tencent.com/nexus/repository/maven-public/
+https://mirrors.tencent.com/npm/
+https://mirrors.tencent.com/pypi/simple/
+https://mirrors.tencent.com/repository/generic
+https://mirrors.tencent.com/repository/generic/nexus-dsh/v1
+https://mirrors.tencent.com/rubygems/
+https://nexus-pool.woa.com/
+https://open-api.yuanbao.tencent.com/open_api/doc_proxy/openapi/drive/v2/files
+https://prod.mcp.it.woa.com/app_iwiki_mcp/mcp3
+https://sbox.woa.com/?tab=ai-assistant
+https://sbox.woa.com/?tab=resource
+https://sbox.woa.com/?tab=resource)
+https://smartrun.woa.com
+https://tai.it.woa.com/user/pat
+https://taiji-nexus-dataset-io-dev.mcp.woa.com
+https://taiji-nexus-dataset-uc-dev.mcp.woa.com
+https://tencent-docs-1251316161.cos.ap-guangzhou.myqcloud.com
+https://tencent-docs-1251316161.cos.ap-guangzhou.myqcloud.com/tmp/xxx?params
+https://test-open-api.yuanbao.woa.com/open_api/doc_proxy/openapi/drive/v2/files
+https://wedata.woa.com/security/user/keys
+https://yuanbao-model-engin-1258344699.cos.ap-beijing-fsi.myqcloud.com/edu_search/test_edu_one_agent_demo_image.jpg?q-sign-algorithm=sha1&q-ak=AKID***REDACTED***&q-sign-time=1781244184;17813
+
+=== BACKEND CLASSES ===
+  /data/workspace/repo_all/nexus/gateway/backend.py:4  - Token-level backends (HyTunerServerBackend, VllmCompletionsBackend) accept
+  /data/workspace/repo_all/nexus/gateway/backend.py:6  - Message-level backend (OpenAIAPIBackend) accepts `messages` and returns message/usage.
+  /data/workspace/repo_all/nexus/gateway/backend.py:22  VLLM_SAMPLING_ARGS = frozenset({
+  /data/workspace/repo_all/nexus/gateway/backend.py:65  key: value for key, value in (request_kwargs or {}).items() if key in VLLM_SAMPLING_ARGS and value is not None
+  /data/workspace/repo_all/nexus/gateway/backend.py:69  def _backend_request_id(request_id: str, request_meta: dict[str, Any]) -> str:
+  /data/workspace/repo_all/nexus/gateway/backend.py:99  class InferenceBackend(Protocol):
+  /data/workspace/repo_all/nexus/gateway/backend.py:104  integrations ride it for per-request context (e.g. HyTuner's ``validate``
+  /data/workspace/repo_all/nexus/gateway/backend.py:123  class HyTunerServerBackend:
+  /data/workspace/repo_all/nexus/gateway/backend.py:124  """Adapt HyTuner's complete generation endpoint to the Gateway backend interface."""
+  /data/workspace/repo_all/nexus/gateway/backend.py:142  assert prompt_ids is not None, 'HyTunerServerBackend requires prompt_ids'
+  /data/workspace/repo_all/nexus/gateway/backend.py:177  class VllmCompletionsBackend:
+  /data/workspace/repo_all/nexus/gateway/backend.py:178  """Wraps one vLLM OpenAI-compatible endpoint for the gateway token lane."""
+  /data/workspace/repo_all/nexus/gateway/backend.py:213  raise NotImplementedError('VllmCompletionsBackend does not support multi-modal inputs')
+  /data/workspace/repo_all/nexus/gateway/backend.py:312  class OpenAIAPIBackend:
+  /data/workspace/repo_all/nexus/gateway/backend.py:313  """Message-level backend wrapping an OpenAI-compatible endpoint.
+  /data/workspace/repo_all/nexus/gateway/backend.py:356  assert messages is not None, 'OpenAIAPIBackend requires messages'
+  /data/workspace/repo_agents/nexus/gateway/backend.py:4  - Token-level backends (HyTunerServerBackend, VllmCompletionsBackend) accept
+  /data/workspace/repo_agents/nexus/gateway/backend.py:6  - Message-level backend (OpenAIAPIBackend) accepts `messages` and returns message/usage.
+  /data/workspace/repo_agents/nexus/gateway/backend.py:22  VLLM_SAMPLING_ARGS = frozenset({
+  /data/workspace/repo_agents/nexus/gateway/backend.py:65  key: value for key, value in (request_kwargs or {}).items() if key in VLLM_SAMPLING_ARGS and value is not None
+  /data/workspace/repo_agents/nexus/gateway/backend.py:69  def _backend_request_id(request_id: str, request_meta: dict[str, Any]) -> str:
+  /data/workspace/repo_agents/nexus/gateway/backend.py:99  class InferenceBackend(Protocol):
+  /data/workspace/repo_agents/nexus/gateway/backend.py:104  integrations ride it for per-request context (e.g. HyTuner's ``validate``
+  /data/workspace/repo_agents/nexus/gateway/backend.py:123  class HyTunerServerBackend:
+  /data/workspace/repo_agents/nexus/gateway/backend.py:124  """Adapt HyTuner's complete generation endpoint to the Gateway backend interface."""
+  /data/workspace/repo_agents/nexus/gateway/backend.py:142  assert prompt_ids is not None, 'HyTunerServerBackend requires prompt_ids'
+  /data/workspace/repo_agents/nexus/gateway/backend.py:177  class VllmCompletionsBackend:
+  /data/workspace/repo_agents/nexus/gateway/backend.py:178  """Wraps one vLLM OpenAI-compatible endpoint for the gateway token lane."""
+  /data/workspace/repo_agents/nexus/gateway/backend.py:213  raise NotImplementedError('VllmCompletionsBackend does not support multi-modal inputs')
+  /data/workspace/repo_agents/nexus/gateway/backend.py:312  class OpenAIAPIBackend:
+  /data/workspace/repo_agents/nexus/gateway/backend.py:313  """Message-level backend wrapping an OpenAI-compatible endpoint.
+  /data/workspace/repo_agents/nexus/gateway/backend.py:356  assert messages is not None, 'OpenAIAPIBackend requires messages'
+  /nix/runtime/nexus/nexus/gateway/backend.py:4  - Token-level backends (HyTunerServerBackend, VllmCompletionsBackend) accept
+  /nix/runtime/nexus/nexus/gateway/backend.py:6  - Message-level backend (OpenAIAPIBackend) accepts `messages` and returns message/usage.
+  /nix/runtime/nexus/nexus/gateway/backend.py:22  VLLM_SAMPLING_ARGS = frozenset({
+  /nix/runtime/nexus/nexus/gateway/backend.py:65  key: value for key, value in (request_kwargs or {}).items() if key in VLLM_SAMPLING_ARGS and value is not None
+  /nix/runtime/nexus/nexus/gateway/backend.py:69  def _backend_request_id(request_id: str, request_meta: dict[str, Any]) -> str:
+  /nix/runtime/nexus/nexus/gateway/backend.py:99  class InferenceBackend(Protocol):
+  /nix/runtime/nexus/nexus/gateway/backend.py:104  integrations ride it for per-request context (e.g. HyTuner's ``validate``
+  /nix/runtime/nexus/nexus/gateway/backend.py:123  class HyTunerServerBackend:
+  /nix/runtime/nexus/nexus/gateway/backend.py:124  """Adapt HyTuner's complete generation endpoint to the Gateway backend interface."""
+  /nix/runtime/nexus/nexus/gateway/backend.py:142  assert prompt_ids is not None, 'HyTunerServerBackend requires prompt_ids'
+  /nix/runtime/nexus/nexus/gateway/backend.py:177  class VllmCompletionsBackend:
+  /nix/runtime/nexus/nexus/gateway/backend.py:178  """Wraps one vLLM OpenAI-compatible endpoint for the gateway token lane."""
+  /nix/runtime/nexus/nexus/gateway/backend.py:213  raise NotImplementedError('VllmCompletionsBackend does not support multi-modal inputs')
+  /nix/runtime/nexus/nexus/gateway/backend.py:312  class OpenAIAPIBackend:
+  /nix/runtime/nexus/nexus/gateway/backend.py:313  """Message-level backend wrapping an OpenAI-compatible endpoint.
+  /nix/runtime/nexus/nexus/gateway/backend.py:356  assert messages is not None, 'OpenAIAPIBackend requires messages'

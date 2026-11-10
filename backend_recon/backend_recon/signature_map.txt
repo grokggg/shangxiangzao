@@ -1,0 +1,816 @@
+=== HMAC/SHA256 LINES (708) ===
+
+  /usr/local/lib/python3.10/dist-packages/yuanbao_convert/adapter/yuanbao_sign.py:38  return hmac.new(
+  /usr/local/lib/python3.10/dist-packages/yuanbao_convert/adapter/yuanbao_sign.py:41  hashlib.sha256,
+  /data/workspace/nexus/extensions/agents/local_one_agent/permission_engine.py:173  'sha256sum',
+  /data/workspace/repo_all/nexus/extensions/agents/local_one_agent/permission_engine.py:173  'sha256sum',
+  /data/workspace/repo_all/nexus/gateway/observers/langfuse.py:1090  return hashlib.sha256(encoded).hexdigest()
+  /data/workspace/repo_all/nexus/runtime/bridge/artifacts.py:270  h = hashlib.sha256()
+  /data/workspace/repo_all/nexus/runtime/client/packaging.py:52  h = hashlib.sha256()
+  /data/workspace/repo_all/nexus/runtime/client/packaging.py:694  """Generate a single RECORD line: ``path,sha256=...,size``."""
+  /data/workspace/repo_all/nexus/runtime/client/packaging.py:695  digest = hashlib.sha256(data).digest()
+  /data/workspace/repo_all/nexus/runtime/client/packaging.py:697  return f'{arcname},sha256={b64},{len(data)}'
+  /data/workspace/repo_all/nexus/runtime/server/venv/manager.py:618  if artifact.whl_sha256:
+  /data/workspace/repo_all/nexus/runtime/server/venv/manager.py:619  digest = hashlib.sha256()
+  /data/workspace/repo_all/nexus/runtime/server/venv/manager.py:624  if actual != artifact.whl_sha256:
+  /data/workspace/repo_all/nexus/runtime/server/venv/manager.py:625  raise ValueError(f'SHA-256 mismatch for {artifact.name}: expected {artifact.whl_sha256}, got {actual}')
+  /data/workspace/repo_all/nexus/runtime/server/venv/models.py:17  whl_sha256: str | None = Field(None, description='SHA-256 checksum for integrity verification')
+  /data/workspace/repo_agents/nexus/extensions/agents/local_one_agent/permission_engine.py:173  'sha256sum',
+  /data/workspace/repo_agents/nexus/gateway/observers/langfuse.py:1090  return hashlib.sha256(encoded).hexdigest()
+  /data/workspace/repo_agents/nexus/runtime/bridge/artifacts.py:270  h = hashlib.sha256()
+  /data/workspace/repo_agents/nexus/runtime/client/packaging.py:52  h = hashlib.sha256()
+  /data/workspace/repo_agents/nexus/runtime/client/packaging.py:694  """Generate a single RECORD line: ``path,sha256=...,size``."""
+  /data/workspace/repo_agents/nexus/runtime/client/packaging.py:695  digest = hashlib.sha256(data).digest()
+  /data/workspace/repo_agents/nexus/runtime/client/packaging.py:697  return f'{arcname},sha256={b64},{len(data)}'
+  /data/workspace/repo_agents/nexus/runtime/server/venv/manager.py:618  if artifact.whl_sha256:
+  /data/workspace/repo_agents/nexus/runtime/server/venv/manager.py:619  digest = hashlib.sha256()
+  /data/workspace/repo_agents/nexus/runtime/server/venv/manager.py:624  if actual != artifact.whl_sha256:
+  /data/workspace/repo_agents/nexus/runtime/server/venv/manager.py:625  raise ValueError(f'SHA-256 mismatch for {artifact.name}: expected {artifact.whl_sha256}, got {actual}')
+  /data/workspace/repo_agents/nexus/runtime/server/venv/models.py:17  whl_sha256: str | None = Field(None, description='SHA-256 checksum for integrity verification')
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:349  sha256=source.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:354  sha256=source.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:365  sha256=wheel.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:370  sha256=wheel.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:381  sha256=uv_lock.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:386  sha256=uv_lock.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:401  sha256=data_list.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:406  sha256=data_list.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:416  'sha256': data_list.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:427  sha256=task_list.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:432  sha256=task_list.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:443  'sha256': task_list.sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:792  sha256: str,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:796  if not kind or not sha256 or isinstance(size_bytes, bool) or size_bytes < 0:
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:798  digest = hashlib.sha256(
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:799  f'nexus-artifact-upload:v1\0{submission_key}\0{kind}\0{sha256}\0{size_bytes}'.encode()
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:830  sha256: str,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:843  'sha256': sha256,
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:984  sha256=_sha256_file(path),
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:1010  sha256=_sha256_file(path),
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:1017  def _sha256_file(path: Path) -> str:
+  /nix/runtime/nexus/nexus/cli/commands/submit.py:1018  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:17  from nexus.dataset.cache import sha256_file
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:291  from nexus.dataset.cache import DEFAULT_DATASET_CACHE_DIR, dataset_cache_dir, sha256_file
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:419  files_path, expected_sha256=spec.sha256, expected_size=spec.size
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:452  downloaded_sha256 = sha256_file(tmp_path)
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:453  if spec.sha256 and downloaded_sha256 != spec.sha256:
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:455  f'Downloaded files sha256 mismatch for item {item.id}: '
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:456  f'expected {spec.sha256}, got {downloaded_sha256}'
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:461  file_sha256 = sha256_file(files_path)
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:462  if spec.sha256 and file_sha256 != spec.sha256:
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:464  f'Downloaded files sha256 mismatch for item {item.id}: '
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:465  f'expected {spec.sha256}, got {file_sha256}'
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:470  'sha256': file_sha256,
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:641  'sha256': sha256_file(staged_files_path),
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:729  if spec.sha256 is not None:
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:730  actual_sha256 = sha256_file(path)
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:731  if actual_sha256 != spec.sha256:
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:732  raise ValueError(f'Task files sha256 mismatch: expected {spec.sha256}, got {actual_sha256}')
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:1258  def _cached_file_matches(path: Path, *, expected_sha256: str | None, expected_size: int | None) -> bool:
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:1263  if expected_sha256 is not None:
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:1264  from nexus.dataset.cache import sha256_file
+  /nix/runtime/nexus/nexus/cli/commands/dataset.py:1266  if sha256_file(path) != expected_sha256:
+  /nix/runtime/nexus/nexus/cli/commands/materialize.py:39  'sha256': result.sha256,
+  /nix/runtime/nexus/nexus/dataset/item.py:30  sha256: str | None = None
+  /nix/runtime/nexus/nexus/dataset/publisher.py:50  sha256: str
+  /nix/runtime/nexus/nexus/dataset/publisher.py:700  digest, size = _sha256_size_file(blob_path)
+  /nix/runtime/nexus/nexus/dataset/publisher.py:704  'sha256': digest,
+  /nix/runtime/nexus/nexus/dataset/publisher.py:793  def _sha256_size(data: bytes) -> tuple[str, int]:
+  /nix/runtime/nexus/nexus/dataset/publisher.py:794  return hashlib.sha256(data).hexdigest(), len(data)
+  /nix/runtime/nexus/nexus/dataset/publisher.py:811  digest, size = _sha256_size_file(path)
+  /nix/runtime/nexus/nexus/dataset/publisher.py:815  sha256=digest,
+  /nix/runtime/nexus/nexus/dataset/publisher.py:825  'sha256': publish_file.sha256,
+  /nix/runtime/nexus/nexus/dataset/publisher.py:831  def _sha256_size_file(path: Path) -> tuple[str, int]:
+  /nix/runtime/nexus/nexus/dataset/publisher.py:832  return _sha256_file(path), path.stat().st_size
+  /nix/runtime/nexus/nexus/dataset/publisher.py:835  def _sha256_file(path: Path) -> str:
+  /nix/runtime/nexus/nexus/dataset/publisher.py:836  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/dataset/cache.py:47  sha256: str | None = None,
+  /nix/runtime/nexus/nexus/dataset/cache.py:49  raw = '\0'.join([namespace, dataset, version, split or '', item_id, root_path, sha256 or ''])
+  /nix/runtime/nexus/nexus/dataset/cache.py:50  return hashlib.sha256(raw.encode('utf-8')).hexdigest()
+  /nix/runtime/nexus/nexus/dataset/cache.py:53  def sha256_bytes(data: bytes) -> str:
+  /nix/runtime/nexus/nexus/dataset/cache.py:54  return hashlib.sha256(data).hexdigest()
+  /nix/runtime/nexus/nexus/dataset/cache.py:57  def sha256_file(path: Path) -> str:
+  /nix/runtime/nexus/nexus/dataset/cache.py:58  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/dataset/task_files.py:31  from nexus.dataset.cache import sha256_file
+  /nix/runtime/nexus/nexus/dataset/task_files.py:145  if self.spec.sha256:
+  /nix/runtime/nexus/nexus/dataset/task_files.py:146  actual = sha256_file(self.zip_path)
+  /nix/runtime/nexus/nexus/dataset/task_files.py:147  if actual != self.spec.sha256:
+  /nix/runtime/nexus/nexus/dataset/task_files.py:148  raise ValueError(f'Task files zip sha256 mismatch: expected {self.spec.sha256}, got {actual}')
+  /nix/runtime/nexus/nexus/dataset/task_files.py:638  source_id = hashlib.sha256(source.encode('utf-8')).hexdigest()[:16]
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:59  sha256: str | None = None
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:95  info.extra = _nexus_extra(mode=mode, data_offset=0, sha256=_sha256_file_digest(child))
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:118  info.extra = _nexus_extra(mode=mode, data_offset=0, sha256=_sha256_file_digest(child))
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:171  def _sha256_file_digest(path: Path) -> bytes:
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:172  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:191  def _nexus_extra(*, mode: int, data_offset: int, sha256: bytes) -> bytes:
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:200  sha256,
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:372  sha256: str | None
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:652  sha256=nexus.sha256,
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:751  version, _flags, mode, data_offset, sha256_raw = struct.unpack('<BBIQ32s', data)
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:754  sha256 = sha256_raw.hex() if any(sha256_raw) else None
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:755  return _NexusExtra(mode=mode, data_offset=data_offset, sha256=sha256)
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:795  if entry.sha256:
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:796  digest = hashlib.sha256(data).hexdigest()
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:797  if digest != entry.sha256:
+  /nix/runtime/nexus/nexus/dataset/zip_index.py:798  raise NexusZipError(f'ZIP entry sha256 mismatch for {entry.path}: expected {entry.sha256}, got {digest}')
+  /nix/runtime/nexus/nexus/gateway/observers/langfuse.py:1090  return hashlib.sha256(encoded).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/submissions.py:49  'submission_sha256': result.execution.submission_sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/executions.py:106  'submission_sha256': item.get('submission_sha256'),
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:79  digest = hashlib.sha256(f'{owner_principal_id}\0{grantee_principal_id}'.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/artifacts.py:42  sha256: str = Field(pattern=r'^[0-9a-f]{64}$')
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/artifacts.py:101  scope = hashlib.sha256(f'{context.principal_id}\0{owner}\0{environment_id}\0artifact-upload'.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/artifacts.py:137  sha256=payload.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/artifacts.py:266  'sha256': artifact.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/artifacts.py:290  'sha256': artifact.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/artifacts.py:302  expected_sha256=upload.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:63  sha256 = request.headers.get('X-Nexus-Sha256', '').strip()
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:65  if len(sha256) != 64 or any(char not in '0123456789abcdef' for char in sha256):
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:66  raise web.HTTPBadRequest(text='invalid_internal_artifact_sha256')
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:85  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:95  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:99  return await _upload_dependency_wheelhouse(request, sha256=sha256, size_bytes=size_bytes)
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:113  idempotency_key = hashlib.sha256(producer_key.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:122  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:201  expected_sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:207  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_uploads.py:215  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:133  expected_sha256=claims.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:139  sha256=claims.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:150  sha256=claims.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:189  'sha256': request.headers.get('X-Nexus-Sha256', ''),
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:270  sha256=ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:299  expected_sha256=ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:302  if str(exc) not in {'artifact_remote_size_mismatch', 'artifact_remote_sha256_mismatch'}:
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_content.py:313  'ETag': ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/executions.py:227  sha256=artifact.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/executions.py:263  expected_sha256=ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/executions.py:266  if str(exc) not in {'artifact_remote_size_mismatch', 'artifact_remote_sha256_mismatch'}:
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:45  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:49  return canonical_sha256(['internal-artifact-upload-scope', 1, *parts])
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:138  expected_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:141  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:163  if received != expected_size_bytes or digest.hexdigest() != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:432  if not internal_token or supplied_token is None or not hmac.compare_digest(supplied_token, internal_token):
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:466  or claims.expected_sha256 != upload.expected_sha256
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_shared.py:476  'sha256': artifact.sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:43  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:79  metadata_sha256 = request.headers.get(WHEELHOUSE_METADATA_SHA256_HEADER, '').strip()
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:80  if metadata_version or metadata_sha256:
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:81  if not metadata_version or not metadata_sha256 or build.manifest_json is None:
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:84  if metadata_version != str(metadata.schema_version) or metadata_sha256 != canonical_sha256(
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:107  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:144  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:152  idempotency_key=hashlib.sha256(producer_key.encode()).hexdigest(),
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:209  expected_sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:215  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/artifact_dependency_build.py:223  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/execution/models.py:111  spec_sha256: str | None = None
+  /nix/runtime/nexus/nexus/distributed/execution/models.py:116  submission_sha256: str | None = None
+  /nix/runtime/nexus/nexus/distributed/config/model.py:560  if not re.fullmatch(r'.+@sha256:[0-9a-f]{64}', self.environment_base_image):
+  /nix/runtime/nexus/nexus/distributed/config/model.py:562  if not re.fullmatch(r'.+@sha256:[0-9a-f]{64}', self.environment_builder_image):
+  /nix/runtime/nexus/nexus/distributed/environment/database_secret.py:47  self._identity = hashlib.sha256(database_url.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/environment/database_secret.py:86  'nexus.io/credential-sha256': self._identity,
+  /nix/runtime/nexus/nexus/distributed/environment/database_secret.py:100  and annotations.get('nexus.io/credential-sha256') == self._identity
+  /nix/runtime/nexus/nexus/distributed/environment/providers.py:25  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/environment/providers.py:107  config_hash = canonical_sha256(provider_config.model_dump(mode='json'))
+  /nix/runtime/nexus/nexus/distributed/environment/provider_config.py:49  r'(?::[A-Za-z0-9][A-Za-z0-9._-]{0,127}|@sha256:[0-9a-f]{64})$'
+  /nix/runtime/nexus/nexus/distributed/environment/controller.py:65  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/environment/controller.py:492  allocator_key = f'{configured_key}:{canonical_sha256(provider_config_snapshot)}'
+  /nix/runtime/nexus/nexus/distributed/environment/allocator.py:18  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/environment/allocator.py:156  current_hash = ((existing.get('metadata') or {}).get('annotations') or {}).get('nexus.io/credential-sha256')
+  /nix/runtime/nexus/nexus/distributed/environment/allocator.py:157  desired_hash = desired['metadata']['annotations']['nexus.io/credential-sha256']
+  /nix/runtime/nexus/nexus/distributed/environment/allocator.py:215  'nexus.io/credential-sha256': canonical_sha256(token),
+  /nix/runtime/nexus/nexus/distributed/environment/naming.py:5  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/environment/naming.py:14  suffix = canonical_sha256(value)[:8]
+  /nix/runtime/nexus/nexus/distributed/environment/naming.py:20  suffix = canonical_sha256(allocation_id)[:8]
+  /nix/runtime/nexus/nexus/distributed/environment/tkex.py:230  return hashlib.sha256(f'{self.api_token}{timestamp}{request_path}'.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/instance_manager/internal.py:56  dedicated_valid = dedicated is not None and hmac.compare_digest(dedicated, token)
+  /nix/runtime/nexus/nexus/distributed/instance_manager/internal.py:57  legacy_valid = legacy is not None and hmac.compare_digest(legacy, expected)
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:375  record_sha256 = raw_ref.get('record_sha256')
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:380  or not isinstance(record_sha256, str)
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:396  expected_sha256=record_sha256,
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:411  expected_sha256=decoded.frame.zip_sha256,
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:417  'sha256': decoded.frame.zip_sha256,
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:663  expected_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/instance_manager/assignments.py:674  if len(zip_bytes) != expected_size or hashlib.sha256(zip_bytes).hexdigest() != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/instance_manager/bootstrap.py:134  f'{source_ref.sha256}\n{wheelhouse_ref.sha256}\n{wheelhouse_metadata.build_key}\n'
+  /nix/runtime/nexus/nexus/distributed/instance_manager/bootstrap.py:153  whl_sha256=nexus_wheel_ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/instance_manager/bootstrap.py:208  if path.is_file() and await asyncio.to_thread(file_identity, path) == (ref.size_bytes, ref.sha256):
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:265  or not hmac.compare_digest(internal_token, expected_internal_token)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:346  return hmac.new(key.encode(), f'nexus-csrf:v1\0{context.principal_id}'.encode(), hashlib.sha256).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:416  if expected_token is None or not hmac.compare_digest(supplied_token, expected_token):
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:144  return hashlib.sha256(f'{issuer}\0{tenant}\0{subject}'.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:175  expected = hashlib.sha256(f'{timestamp}{application_token}{sequence}{timestamp}'.encode()).hexdigest().upper()
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:176  if not hmac.compare_digest(signature, expected):
+  /nix/runtime/nexus/nexus/distributed/artifacts/maintenance.py:232  expected_sha256=claim.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/maintenance.py:238  if str(exc) in {'artifact_remote_size_mismatch', 'artifact_remote_sha256_mismatch'}:
+  /nix/runtime/nexus/nexus/distributed/artifacts/files.py:9  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/artifacts/models.py:26  sha256: str = Field(pattern=r'^[0-9a-f]{64}$')
+  /nix/runtime/nexus/nexus/distributed/artifacts/models.py:36  sha256: str
+  /nix/runtime/nexus/nexus/distributed/artifacts/models.py:49  expected_sha256: str
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:49  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:59  expected_sha256: str | None = None,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:109  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:117  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:127  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:135  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:159  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:166  await asyncio.to_thread(self._put_file, source, target, sha256, size_bytes)
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:167  return StoredObject(uri=target.as_uri(), etag=sha256)
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:178  expected_sha256: str | None = None,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:189  expected_sha256=expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:223  def _put_file(source: Path, target: Path, sha256: str, size_bytes: int) -> None:
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:226  if existing_size == size_bytes and existing_sha == sha256:
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:234  expected_sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:237  if str(exc) not in {'artifact_remote_size_mismatch', 'artifact_remote_sha256_mismatch'}:
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:282  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:316  expected_sha256: str | None = None,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:338  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:348  if expected_sha256 is not None and digest.hexdigest() != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:349  raise ValueError('artifact_remote_sha256_mismatch')
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:469  expected_sha256: str | None = None,
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:476  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:487  if expected_sha256 is not None and digest.hexdigest() != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/artifacts/store.py:488  raise ValueError('artifact_remote_sha256_mismatch')
+  /nix/runtime/nexus/nexus/distributed/artifacts/run_result.py:34  _ARTIFACT_REF_KEYS = ('artifact_id', 'kind', 'sha256', 'size_bytes')
+  /nix/runtime/nexus/nexus/distributed/artifacts/run_result.py:412  sha256 = raw_ref.get('sha256')
+  /nix/runtime/nexus/nexus/distributed/artifacts/run_result.py:420  if not isinstance(sha256, str) or re.fullmatch(r'[0-9a-f]{64}', sha256) is None:
+  /nix/runtime/nexus/nexus/distributed/artifacts/run_result.py:421  raise ValueError('run_result ArtifactRef has invalid sha256')
+  /nix/runtime/nexus/nexus/distributed/artifacts/run_result.py:431  if len(content) != artifact_ref['size_bytes'] or hashlib.sha256(content).hexdigest() != artifact_ref['sha256']:
+  /nix/runtime/nexus/nexus/distributed/artifacts/ports.py:41  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/spool.py:93  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/spool.py:97  key = _cache_key(sha256, size_bytes)
+  /nix/runtime/nexus/nexus/distributed/artifacts/spool.py:210  def _cache_key(sha256: str, size_bytes: int) -> str:
+  /nix/runtime/nexus/nexus/distributed/artifacts/spool.py:212  if not isinstance(sha256, str) or re.fullmatch(r'[0-9a-f]{64}', sha256) is None:
+  /nix/runtime/nexus/nexus/distributed/artifacts/spool.py:213  raise ValueError('artifact cache sha256 is invalid')
+  /nix/runtime/nexus/nexus/distributed/artifacts/spool.py:214  return f'{sha256}-{size_bytes}'
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:356  ARTIFACT_SHA256_HEADER: ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:362  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:385  if actual_size != ref.size_bytes or digest.hexdigest() != ref.sha256:
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:425  ARTIFACT_SHA256_HEADER: hashlib.sha256(content).hexdigest(),
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:449  expected_sha256: str | None = None,
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:456  if expected_sha256 is None or expected_size_bytes is None:
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:457  raise ValueError('Preverified Artifact identity requires sha256 and size')
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:459  actual_sha256 = expected_sha256
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:461  actual_size, actual_sha256 = await asyncio.to_thread(file_identity, source)
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:464  if expected_sha256 is not None and actual_sha256 != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:465  raise ValueError('Artifact file sha256 mismatch')
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:472  ARTIFACT_SHA256_HEADER: actual_sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:638  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:649  expected_sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:653  if ref['sha256'] != sha256 or ref['size_bytes'] != size_bytes:
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:702  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/artifacts/gateway.py:716  WHEELHOUSE_METADATA_SHA256_HEADER: canonical_sha256(payload),
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:48  expected_sha256: str = Field(pattern=r'^[0-9a-f]{64}$')
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:78  expected_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:90  expected_sha256=expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:95  signature = hmac.new(self._keys[self.current_key_id], encoded_payload.encode(), hashlib.sha256).digest()
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:110  expected = hmac.new(key, encoded_payload.encode(), hashlib.sha256).digest()
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:111  if not hmac.compare_digest(signature, expected):
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:231  signature = hmac.new(self._keys[self.current_key_id], encoded_payload.encode(), hashlib.sha256).digest()
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:244  expected = hmac.new(key, encoded_payload.encode(), hashlib.sha256).digest()
+  /nix/runtime/nexus/nexus/distributed/artifacts/tickets.py:245  if not hmac.compare_digest(signature, expected):
+  /nix/runtime/nexus/nexus/distributed/submission/workload_image.py:7  _DIGEST_PINNED_IMAGE_PATTERN = re.compile(r'(?P<repository>.+)@sha256:[0-9a-f]{64}')
+  /nix/runtime/nexus/nexus/distributed/submission/source_package.py:71  sha256: str
+  /nix/runtime/nexus/nexus/distributed/submission/source_package.py:96  self.digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/submission/source_package.py:179  sha256=identity.digest.hexdigest(),
+  /nix/runtime/nexus/nexus/distributed/submission/specs.py:351  sha256: str = Field(pattern=r'^[0-9a-f]{64}$')
+  /nix/runtime/nexus/nexus/distributed/submission/specs.py:376  if self.ref.sha256 != self.manifest.sha256 or self.ref.size_bytes != self.manifest.size_bytes:
+  /nix/runtime/nexus/nexus/distributed/submission/specs.py:385  sha256: str = Field(pattern=r'^[0-9a-f]{64}$')
+  /nix/runtime/nexus/nexus/distributed/submission/specs.py:397  if self.ref.sha256 != self.manifest.sha256 or self.ref.size_bytes != self.manifest.size_bytes:
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:25  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:96  module_lock_sha256: str | None = Field(
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:139  has_lock = self.module_lock_path is not None or self.module_lock_sha256 is not None
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:144  if self.module_lock_path is None or self.module_lock_sha256 is None:
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:176  return canonical_sha256({
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:197  'sha256': ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/dependency_build/wheelhouse.py:327  module_lock_sha256=(hashlib.sha256(module_lock.read_bytes()).hexdigest() if module_lock is not None else None),
+  /nix/runtime/nexus/nexus/distributed/dependency_build/local.py:110  digest = hashlib.sha256(path.read_bytes()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/dependency_build/local.py:114  sha256=digest,
+  /nix/runtime/nexus/nexus/distributed/dependency_build/controller.py:387  current_hash = ((existing.get('metadata') or {}).get('annotations') or {}).get('nexus.io/credential-sha256')
+  /nix/runtime/nexus/nexus/distributed/dependency_build/controller.py:388  desired_hash = rendered.secret['metadata']['annotations']['nexus.io/credential-sha256']
+  /nix/runtime/nexus/nexus/distributed/dependency_build/rendering.py:12  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/dependency_build/rendering.py:49  token_hash = canonical_sha256(token)
+  /nix/runtime/nexus/nexus/distributed/dependency_build/rendering.py:57  'annotations': {**annotations, 'nexus.io/credential-sha256': token_hash},
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:66  sha256: str
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:81  expected_sha256: str
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:120  if len(request.sha256) != 64 or any(char not in '0123456789abcdef' for char in request.sha256):
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:121  raise DomainValidationError('invalid_artifact_sha256')
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:161  sha256=request.sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:172  sha256=request.sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:188  expected_sha256=request.sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:452  if artifact.kind != ref.kind or artifact.sha256 != ref.sha256 or artifact.size_bytes != ref.size_bytes:
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:559  expected_sha256=row.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:807  or row.expected_sha256 != request.sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:819  or row.sha256 != request.sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:831  or upload.expected_sha256 != artifact.sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:837  def artifact_object_key(*, owner_principal_id: str, artifact_id: str, sha256: str, kind: str) -> str:
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:838  owner_hash = hashlib.sha256(owner_principal_id.encode()).hexdigest()[:24]
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:839  return f'{owner_hash}/{artifact_id}/{sha256}/{_CANONICAL_FILENAMES[kind]}'
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:845  sha256=row.sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:856  sha256=row.sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/artifact.py:870  expected_sha256=row.expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/shard_lease.py:281  digest = hashlib.sha256(shard_group.encode()).hexdigest()[:32]
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:61  canonical_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:112  submission_sha256 = _submission_sha256(submission)
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:134  or existing.submission_sha256 != submission_sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:222  submission_sha256=submission_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:252  allocation_spec_hash = canonical_sha256(allocation_spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:287  submission_sha256=submission_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:366  submission_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:477  parent_spec_hash = canonical_sha256(parent_spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:478  child_spec_hash = canonical_sha256(child_spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:544  submission_sha256=submission_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:764  'task_list_sha256': manifest['sha256'] if manifest is not None else None,
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:808  def _submission_sha256(submission: Submission) -> str:
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:813  return canonical_sha256(public_payload)
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:814  credential_digest = canonical_sha256(submission.data_credentials.storage_payloads())
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:815  return canonical_sha256({'submission': public_payload, 'data_credentials_sha256': credential_digest})
+  /nix/runtime/nexus/nexus/distributed/repositories/submission.py:862  digest = canonical_sha256({
+  /nix/runtime/nexus/nexus/distributed/repositories/trace_database.py:276  return f'nxs_ro_{hashlib.sha256(_USERNAME_DOMAIN + identity).hexdigest()[:24]}'
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:62  from nexus.distributed.utils.identity import canonical_sha256, new_id
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:144  spec_sha256: str
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:152  child_spec_sha256: str
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:383  or manifest.get('sha256') != ref.sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:396  row.task_list_sha256 = ref.sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:440  row.task_list_sha256 = payload['sha256']
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:516  for index, (record, offset, length, spec_sha256) in enumerate(records):
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:527  spec_sha256=spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:538  or existing.spec_sha256 != spec_sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:966  'module_lock_sha256': None,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1034  spec_sha256=item.spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1070  child_spec_sha256 = prepared.child_spec_sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1079  spec_sha256=child.spec_sha256 or child_spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1086  elif attempt.child_execution_id != child.execution_id or attempt.spec_sha256 != child_spec_sha256:
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1510  'spec_sha256': row.spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1624  allocation_spec_hash = canonical_sha256(prepared_allocation_spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1668  module_dependencies['module_lock_sha256'] = metadata.module_lock_sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1776  records.append((record, offset, length, canonical_sha256(record.identity())))
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1798  task_list_digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1827  if task_list_digest.hexdigest() != expected_task_list_ref.sha256:
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1843  record, _offset, _length, _spec_sha256 = record_with_location
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1921  or canonical_sha256(record.identity()) != item.spec_sha256
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1937  'record_sha256': item.spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1944  child_spec_sha256 = canonical_sha256(child_spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1974  spec_sha256=child_spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:1982  child_spec_sha256=child_spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/batch.py:2095  'spec_sha256': row.spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/_records.py:79  spec_sha256=row.spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/_records.py:84  submission_sha256=row.submission_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:39  canonical_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:151  spec_sha256: str | None = None
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:152  submission_sha256: str | None = None
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:171  spec_sha256 = request.spec_sha256 or canonical_sha256(request.spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:182  if existing.spec_sha256 != spec_sha256 or existing.owner_principal_id != request.owner_principal_id:
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:190  row = self._new_execution_row(request, placement=placement, spec_sha256=spec_sha256, now=now)
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:251  spec_sha256 = request.spec_sha256 or canonical_sha256(request.spec)
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:254  if row.spec_sha256 != spec_sha256 or row.owner_principal_id != request.owner_principal_id:
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:259  row = self._new_execution_row(request, placement=placement, spec_sha256=spec_sha256, now=now)
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:287  spec_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:301  spec_sha256=spec_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/execution.py:306  submission_sha256=request.submission_sha256,
+  /nix/runtime/nexus/nexus/distributed/repositories/access.py:399  if key is None or not hmac.compare_digest(row.token_hash, _token_hash(key, token)):
+  /nix/runtime/nexus/nexus/distributed/repositories/access.py:599  return hmac.new(key.encode(), token.encode(), hashlib.sha256).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/repositories/access.py:609  digest = hashlib.sha256(owner_principal_id.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:51  sha256: str = Field(pattern=_SHA256_PATTERN)
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:64  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:73  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:79  zip_sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:84  return DataRef(version=1, offset=self.offset, length=self.length, sha256=self.sha256)
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:151  archive_size, archive_sha256 = _file_identity_no_follow(archive_path)
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:159  'sha256': archive_sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:176  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:182  archive_digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:192  if copied != archive_size or archive_digest.hexdigest() != archive_sha256:
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:196  return DataRef(version=1, offset=offset, length=frame_size, sha256=digest.hexdigest())
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:229  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:234  sha256=digest.hexdigest(),
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:266  file_digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:314  sha256=file_digest.hexdigest(),
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:351  if hashlib.sha256(encoded).hexdigest() != expected_frame.sha256:
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:385  item_id, declared_zip_size, declared_zip_sha256 = _validate_frame_metadata(metadata)
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:388  actual_zip_sha256 = hashlib.sha256(zip_bytes).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:389  if actual_zip_sha256 != declared_zip_sha256:
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:390  raise DataListError('invalid_batch_data_list', detail='ZIP sha256 identity mismatch')
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:396  digest = hashlib.sha256(encoded).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:397  if expected_ref is not None and (expected_ref.length != len(encoded) or expected_ref.sha256 != digest):
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:404  sha256=digest,
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:410  zip_sha256=actual_zip_sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:428  if set(task_files) != {'type', 'sha256', 'size_bytes'} or task_files.get('type') != 'zip':
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:431  sha256 = task_files.get('sha256')
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:435  not isinstance(sha256, str)
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:436  or len(sha256) != 64
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:437  or any(character not in '0123456789abcdef' for character in sha256)
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:439  raise DataListError('invalid_batch_data_list', detail='invalid frame ZIP sha256')
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:440  return item_id, size_bytes, sha256
+  /nix/runtime/nexus/nexus/distributed/batch/data_list.py:482  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/task_list.py:27  digest = hashlib.sha256(value.encode()).hexdigest()[:_NORMALIZED_ID_DIGEST_LENGTH]
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:16  from nexus.distributed.utils.identity import canonical_json, canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:25  record_sha256 CHAR(64) NOT NULL,
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:34  (parent_execution_id, item_id, record_version, record_sha256, record_data)
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:57  record_sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:75  record_sha256=canonical_sha256(payload),
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:141  record_sha256=canonical_sha256(payload),
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:161  expected_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:167  if record.record_sha256 != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:174  expected_sha256=expected_sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:183  if not isinstance(payload, dict) or canonical_sha256(payload) != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:197  def decode_run_input(record: BatchTaskRecord, *, expected_sha256: str) -> dict[str, Any]:
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:198  return decode_task_record(record, expected_sha256=expected_sha256).run_input
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:204  expected_sha256: str,
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:224  if canonical_sha256(payload) != expected_sha256:
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:322  record.record_sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:330  'SELECT item_id, record_version, record_sha256 FROM batch_task_records '
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:337  persisted = {str(item_id): (int(version), str(sha256)) for item_id, version, sha256 in fetched}
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:338  expected = {record.item_id: (record.record_version, record.record_sha256) for record in records}
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:348  'SELECT record_version, record_sha256, record_data FROM batch_task_records '
+  /nix/runtime/nexus/nexus/distributed/batch/task_store.py:371  record_sha256=str(row[1]),
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:57  from nexus.distributed.utils.identity import canonical_sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:78  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:89  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:98  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:110  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:455  sha256=staged_manifest.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:475  sha256=materialized.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:483  sha256=materialized.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:520  sha256=task_list_ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:535  sha256=task_list_ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:547  sha256=data_list_spec.ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:683  sha256=task_list_ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:699  sha256=data_list_spec.ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:972  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:979  and verified.sha256 == sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:997  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1003  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1021  sha256: str,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1028  and verified.sha256 == sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1074  sha256=spec.ref.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1104  sha256=manifest.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1318  if manifest.sha256 != ref.sha256 or manifest.size_bytes != ref.size_bytes:
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1332  and prepared.sha256 == ref.sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1347  and prepared.sha256 == ref.sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1371  manifest.sha256 != spec.ref.sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1373  or manifest.sha256 != spec.manifest.sha256
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1402  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1436  selector_digest = canonical_sha256(selector_values) if representative is not None else None
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1691  expected_fields = {'version', 'sha256', 'size_bytes', 'total_items'}
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1698  sha256 = payload['sha256']
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1700  not isinstance(sha256, str)
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1701  or len(sha256) != 64
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1702  or any(character not in '0123456789abcdef' for character in sha256)
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1704  raise ValueError('result sha256 is invalid')
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1715  sha256=sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/control.py:1724  if _file_identity(output_path) != (materialized.size_bytes, materialized.sha256):
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:22  from nexus.dataset.cache import sha256_file
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:54  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:65  sha256: str
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:80  def sha256(self) -> str:
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:81  return self.task_list.sha256
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:538  sha256=data_manifest.sha256,
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:629  if spec.sha256 is not None and spec.sha256 != sha256_file(path):
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:662  self.digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:746  sha256=self.digest.hexdigest(),
+  /nix/runtime/nexus/nexus/distributed/batch/materialize.py:834  'sha256': result.sha256,
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:118  spec_sha256: Mapped[str | None] = mapped_column(String(64), nullable=True)
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:123  submission_sha256: Mapped[str | None] = mapped_column(String(64), nullable=True)
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:366  sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:455  expected_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:729  task_list_sha256: Mapped[str | None] = mapped_column(String(64), nullable=True)
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:776  spec_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+  /nix/runtime/nexus/nexus/distributed/persistence/orm.py:810  spec_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+  /nix/runtime/nexus/nexus/distributed/persistence/migrations/versions/0004_cloud_submit_foundation.py:169  sa.Column('spec_sha256', sa.String(64), nullable=True),
+  /nix/runtime/nexus/nexus/distributed/persistence/migrations/versions/0004_cloud_submit_foundation.py:174  sa.Column('submission_sha256', sa.String(64), nullable=True),
+  /nix/runtime/nexus/nexus/distributed/persistence/migrations/versions/0004_cloud_submit_foundation.py:246  sa.Column('task_list_sha256', sa.String(64), nullable=True),
+  /nix/runtime/nexus/nexus/distributed/utils/identity.py:34  digest = hashlib.sha256(value.encode('utf-8')).digest()
+  /nix/runtime/nexus/nexus/distributed/utils/identity.py:42  def canonical_sha256(value: Any) -> str:
+  /nix/runtime/nexus/nexus/distributed/utils/identity.py:43  return hashlib.sha256(canonical_json(value).encode()).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/compatibility/live.py:78  return f'sha256:{hashlib.sha256(canonical).hexdigest()}'
+  /nix/runtime/nexus/nexus/runner/trace/trace.py:59  return hashlib.sha256(_PRINCIPAL_TRACE_SCOPE_DOMAIN + owner_principal_id.encode('utf-8')).hexdigest()[:32]
+  /nix/runtime/nexus/nexus/runner/trace/tdsql/writer.py:136  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/runner/trace/tdsql/writer.py:142  f'sha256={digest.hexdigest()[:16]} sample={sample!r}'
+  /nix/runtime/nexus/nexus/runner/live/models.py:8  from hashlib import sha256
+  /nix/runtime/nexus/nexus/runner/live/models.py:176  return f'sha256:{sha256(canonical.encode("utf-8")).hexdigest()}'
+  /nix/runtime/nexus/nexus/extensions/tools/file_editor/utils/file_cache.py:31  hashed_key = hashlib.sha256(key.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tools/file_editor/utils/truncate.py:35  content_hash = hashlib.sha256(content.encode('utf-8')).hexdigest()[:8]
+  /nix/runtime/nexus/nexus/extensions/tools/search_stateful/visit.py:14  endpoint, same HMAC auth, same prompt, same ``jina_model*`` config keys, so summaries stay
+  /nix/runtime/nexus/nexus/extensions/tools/search_stateful/visit.py:91  """Build the HMAC-SHA1 auth header the gpt-eval endpoint expects."""
+  /nix/runtime/nexus/nexus/extensions/tools/search_stateful/visit.py:95  sign = hmac.new(secret_key.encode(), sign_str.encode(), hashlib.sha1).digest()
+  /nix/runtime/nexus/nexus/extensions/tools/web_search/visit.py:99  """生成 HMAC 认证头"""
+  /nix/runtime/nexus/nexus/extensions/tools/web_search/visit.py:103  sign = hmac.new(secret_key.encode(), sign_str.encode(), hashlib.sha1).digest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/constants.py:76  # .git object graph is byte-identical (validated by full-object-set sha256).
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:18  test_patch_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:20  fail_to_pass_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:22  pass_to_pass_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:23  post_test_file_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:24  payload_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:37  test_patch_sha256='31b719cc3d54f539d1e5e3632599048a8d7e13878091477c75157942f429ab44',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:39  fail_to_pass_sha256='81af166cecf0c41065a07bb3fe17b405de1114831216e0adac88b1d19034f117',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:41  pass_to_pass_sha256='840febde1ac2cf6af4b5e617c37abdc8edbc01dd44565b39f089b9553991e563',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:42  post_test_file_sha256='f9251251619f8c31f43f469ebb91b1eb458b5a8a6ebbe3e3890d72c0fb8fba34',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:43  payload_sha256='3ff5183c3b40ebf3bc4f9c8f734a72948800f59f690d161576c251b34ba629c3',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:111  def _canonical_test_status_sha256(tests: list[str]) -> str:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:113  return hashlib.sha256(encoded).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:131  expected_test_sha256 = {case.post_test_file_sha256!r}
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:132  expected_payload_sha256 = {case.payload_sha256!r}
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:140  if hashlib.sha256(original).hexdigest() != expected_test_sha256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:146  if hashlib.sha256(payload).hexdigest() != expected_payload_sha256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:209  if hashlib.sha256(test_patch.encode()).hexdigest() != case.test_patch_sha256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:215  or _canonical_test_status_sha256(fail_to_pass) != case.fail_to_pass_sha256
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_latex_images_fixture.py:222  or _canonical_test_status_sha256(pass_to_pass) != case.pass_to_pass_sha256
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_linkcheck_fixture.py:16  test_patch_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_linkcheck_fixture.py:27  test_patch_sha256='a7838eb1fc35e0604d8cf83187b1005c5cc3c8b3323341fd8b52cf7b278d34d7',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_linkcheck_fixture.py:42  test_patch_sha256='90b91b5a11cf12c3b66e09e3565db97eab511467a004f991d06daf90b532ea14',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_linkcheck_fixture.py:60  test_patch_sha256='805ddf0fe1635f793420f7e16d069d216c3078aa2d0f7d70900c75809b3e0d9a',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_linkcheck_fixture.py:120  test_patch_sha256 = hashlib.sha256(test_patch.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/sphinx_linkcheck_fixture.py:121  if test_patch_sha256 != case.test_patch_sha256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:16  test_patch_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:18  fail_to_pass_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:20  pass_to_pass_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:21  post_test_file_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:34  test_patch_sha256='a9542a0223dcb934125f74642468fb69c5cae8d5fa1602279a3745862db6252d',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:36  fail_to_pass_sha256='62c407d559b8089a6cc3c3ee45e53ecede5d939683204f1a745d9a0263d6a168',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:38  pass_to_pass_sha256='36d6ebd9ae18d706c395c0b815c8e5ca0d8d69dad086121d3a3cf943ea9b3d6d',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:39  post_test_file_sha256='318da0521e0d056ccf97b64adee853e7d53244f7c82b4b8c7dd7c0ef72d50ae2',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:45  test_patch_sha256='ff283039874db19ea594bda54c2aa6812eb25fea9881e2517c4a143805cdb552',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:47  fail_to_pass_sha256='36ad2bde8f7bd06bef39d763c8710605b8072eb2969ad3e5c37fc9be439e2c44',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:49  pass_to_pass_sha256='cdce5ad360721a761c14706bd9038f4c0d3ec3b6619fc747099246ba2f851d10',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:50  post_test_file_sha256='fe816a0da3b4abd996014ef559a0ce7eeefcd0664d62a683924bd65840998b02',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:76  expected_sha256: str,
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:80  actual_sha256 = hashlib.sha256(canonical_json.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:81  if len(tests) != expected_count or actual_sha256 != expected_sha256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:104  if hashlib.sha256(test_patch.encode()).hexdigest() != case.test_patch_sha256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:112  case.fail_to_pass_sha256,
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:119  case.pass_to_pass_sha256,
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:175  '    actual_sha256 = hashlib.sha256(payload).hexdigest()',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:176  f"    expected_sha256 = '{case.post_test_file_sha256}'",
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:177  '    if actual_sha256 != expected_sha256:',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench/requests_internal_httpbin.py:179  "            f'unexpected test_requests.py sha256: {actual_sha256}; expected {expected_sha256}'",
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:199  def _sha256(value: str) -> str:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:200  return hashlib.sha256(value.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:261  if not isinstance(gold_patch, str) or _sha256(gold_patch) != GOLD_PATCH_SHA256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:266  or _sha256(official_test_patch) != TEST_PATCH_SHA256
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:297  if _sha256(NORMALIZED_TEST_PATCH) != NORMALIZED_PATCH_SHA256:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:353  f'test "$(sha256sum {OLD_TEST_FILE} | awk \'{{print $1}}\')" = {BASE_SOURCE_SHA256}'
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:354  " || valkey_928_setup_error 'base source sha256 mismatch'",
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:357  f'test "$(sha256sum "$valkey_928_patch_file" | awk \'{{print $1}}\')" = {NORMALIZED_PATCH_SHA256}'
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:358  " || valkey_928_setup_error 'normalized patch sha256 mismatch'",
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:365  f'test "$(sha256sum {NEW_TEST_FILE} | awk \'{{print $1}}\')" = {NORMALIZED_TARGET_SHA256}'
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_multilingual/valkey_928.py:366  " || valkey_928_setup_error 'normalized target sha256 mismatch'",
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:27  NODEBB_REGISTRY_SERVER_SHA256 = hashlib.sha256(NODEBB_REGISTRY_SERVER_SOURCE.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:28  NODEBB_REGISTRY_MANIFEST_SHA256 = hashlib.sha256(NODEBB_REGISTRY_MANIFEST_JSON.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:41  test_patch_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:42  before_repo_set_cmd_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:44  fail_to_pass_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:46  pass_to_pass_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:47  spec_sha256: tuple[tuple[str, str], ...]
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:48  test_file_sha256: str
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:69  test_patch_sha256='73590de413d2405f5b36db8ed967c39f3a44984af3ed0c24925bd8737ab626fb',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:70  before_repo_set_cmd_sha256='49a80d23fd759829b9de3c6c7ca88c4e2d6b68f364dc06f42d17b9fc18b46d6e',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:72  fail_to_pass_sha256='174a44296a7fe0ee5fb66aafc23e65f3470d4f1bcb5954174fda320531fa4a2d',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:74  pass_to_pass_sha256='fa2984a51674b06fd80b4c140c3d629bc050b9f5798579deb789639439482363',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:75  spec_sha256=(
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:81  test_file_sha256='b9344d41e89dfc82b2e6e8e80b0c767a33b553fedf05ee16de0b0c0918ac1d5f',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:88  def _sha256(value: str) -> str:
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:89  return hashlib.sha256(value.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:115  return len(tests), _sha256(payload)
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:123  fail_to_pass_count, fail_to_pass_sha256 = _canonical_test_fingerprint(
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:126  pass_to_pass_count, pass_to_pass_sha256 = _canonical_test_fingerprint(
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:149  test_patch_sha256=_sha256(test_patch),
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:150  before_repo_set_cmd_sha256=_sha256(before_repo_set_cmd),
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:152  fail_to_pass_sha256=fail_to_pass_sha256,
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:154  pass_to_pass_sha256=pass_to_pass_sha256,
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:155  spec_sha256=tuple(sorted((name, _sha256(value)) for name, value in specs.items())),
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:156  test_file_sha256=expected.test_file_sha256,
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:283  spec_sha256 = dict(case.spec_sha256)
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:332  nodebb_registry_check_sha256() {{
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:336  nodebb_registry_actual_sha=$(sha256sum "$nodebb_registry_file" | awk '{{print $1}}')
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:357  nodebb_registry_check_sha256 {shlex.quote(case.test_file_sha256)} test/plugins.js test/plugins.js
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:358  nodebb_registry_check_sha256 {shlex.quote(spec_sha256['baseDockerfile'])} \
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:360  nodebb_registry_check_sha256 {shlex.quote(spec_sha256['instanceDockerfile'])} \
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:362  nodebb_registry_check_sha256 {shlex.quote(spec_sha256['parser.py'])} {parser_path} parser.py
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:363  nodebb_registry_check_sha256 {shlex.quote(spec_sha256['run_script.sh'])} {run_script_path} run_script.sh
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:364  nodebb_registry_check_sha256 {shlex.quote(NODEBB_REGISTRY_SERVER_SHA256)} \
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:366  nodebb_registry_check_sha256 {shlex.quote(NODEBB_REGISTRY_MANIFEST_SHA256)} \
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_bench_pro/nodebb_registry_fixture.py:368  nodebb_registry_check_sha256 {shlex.quote(NODEBB_REGISTRY_ASSET_BUNDLE_SHA256)} \
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/reward_hacking/signals.py:210  r'file|wc|diff|unzip|jar\s+xf|7z|python3?\s+-m\s+zipfile|md5sum|sha256sum)\b',
+  /nix/runtime/nexus/nexus/extensions/tasks/swe/swe_smith/constants.py:175  rng = random.Random(int(hashlib.sha256(s.encode()).hexdigest(), 16))
+  /nix/runtime/nexus/nexus/extensions/tasks/lean4_proof/verify_proof.py:590  key = hashlib.sha256(f'{header}\x00{statement}\x00{target}'.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/aidata/aidata_orchestrator.py:355  sha = hashlib.sha256(part.read_bytes()).hexdigest() if part.exists() else ''
+  /nix/runtime/nexus/nexus/extensions/tasks/aidata/aidata_orchestrator.py:362  'sha256': sha,
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:110  def _sha256_bytes(value: bytes) -> str:
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:111  return hashlib.sha256(value).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:114  def _decoded_archive_sha256(value: str | None) -> str | None:
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:121  return _sha256_bytes(payload)
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:129  def task_spec_sha256(task_config: dict[str, Any]) -> str:
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:130  return _sha256_bytes(_canonical_json(task_spec_payload(task_config)))
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:313  'task_spec_sha256': task_spec_sha256(task_config),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:314  'case_data_sha256': _decoded_archive_sha256(task_config.get('case_data_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:315  'eval_data_sha256': _decoded_archive_sha256(task_config.get('eval_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:316  'groundtruth_data_sha256': _decoded_archive_sha256(task_config.get('groundtruth_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:339  'task_spec_sha256': task_spec_sha256(task_config),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:340  'case_data_sha256': _decoded_archive_sha256(task_config.get('case_data_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:341  'eval_data_sha256': _decoded_archive_sha256(task_config.get('eval_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:342  'groundtruth_data_sha256': _decoded_archive_sha256(task_config.get('groundtruth_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:370  'task_spec_sha256': task_spec_sha256(task_config),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:371  'case_data_sha256': _decoded_archive_sha256(task_config.get('case_data_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:372  'eval_data_sha256': _decoded_archive_sha256(task_config.get('eval_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/toolathlon_gym/binding.py:373  'groundtruth_data_sha256': _decoded_archive_sha256(task_config.get('groundtruth_tar_b64')),
+  /nix/runtime/nexus/nexus/extensions/tasks/waa/getters/file.py:86  cache_key = hashlib.sha256(f'{url}\0{dest}'.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/tasks/swe_builder/eval.py:428  # cache layers (the "sha256: unable to find image" race condition).
+  /nix/runtime/nexus/nexus/extensions/tasks/one_agent_infer/task.py:659  sha = parse_cache.content_sha256(file_content)
+  /nix/runtime/nexus/nexus/extensions/tasks/vita/vita_utils/utils.py:57  return hashlib.sha256(hash_string.encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/openai_clients/hytuner.py:507  signature = hashlib.sha256(serialized_history).digest()
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:23  content_sha256: str
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:24  task_toml_sha256: str
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:38  'task_content_sha256': self.content_sha256,
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:39  'task_toml_sha256': self.task_toml_sha256,
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:49  content_sha256 = task_content_sha256(task_dir)
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:51  run_id=task_run_id(task_id, content_sha256),
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:52  content_sha256=content_sha256,
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:53  task_toml_sha256=task_toml_sha256(task_dir),
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:57  def task_content_sha256(task_dir: Path) -> str:
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:60  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:86  def task_toml_sha256(task_dir: Path) -> str:
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:87  return hashlib.sha256((task_dir / 'task.toml').read_bytes()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:90  def task_run_id(task_id: str, content_sha256: str) -> str:
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:92  return f't3-harbor__{component}__{content_sha256[:16]}'
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:103  file_digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:118  'task_content_sha256',
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/identity.py:120  'task_toml_sha256',
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/dataset_source.py:26  task_content_sha256,
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/dataset_source.py:270  digest = task_content_sha256(task_dir)
+  /nix/runtime/nexus/nexus/extensions/harbor_bridge/dataset_source.py:274  digest = hashlib.sha256(str(task_dir).encode()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/agents/handy/agent.py:47  sha256: str
+  /nix/runtime/nexus/nexus/extensions/agents/handy/agent.py:135  sha256=entry.get('sha256', ''),
+  /nix/runtime/nexus/nexus/extensions/agents/handy/agent.py:178  digest = hashlib.sha256(payload).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/agents/handy/agent.py:179  if artifact.sha256 and digest != artifact.sha256:
+  /nix/runtime/nexus/nexus/extensions/agents/handy/agent.py:180  artifact.fetch_error = f'sha256 mismatch: expected {artifact.sha256}, got {digest}'
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:81  archive_sha256: str
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:83  package_lock_sha256: str
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:203  archive_sha256 = _required(raw, 'archive_sha256', str)
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:204  package_lock_sha256 = _required(raw, 'package_lock_sha256', str)
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:205  if not _SHA256_PATTERN.fullmatch(archive_sha256):
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:206  raise PrebuiltIntegrityError('prebuilt archive_sha256 must be 64 lowercase hexadecimal characters')
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:207  if not _SHA256_PATTERN.fullmatch(package_lock_sha256):
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:208  raise PrebuiltIntegrityError('prebuilt package_lock_sha256 must be 64 lowercase hexadecimal characters')
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:221  archive_sha256=archive_sha256,
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:223  package_lock_sha256=package_lock_sha256,
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:254  size, actual_sha256 = _download_archive(manifest, archive_path=archive_path, timeout=timeout)
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:259  if actual_sha256 != manifest.archive_sha256:
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:261  f'prebuilt archive SHA-256 mismatch: expected {manifest.archive_sha256}, got {actual_sha256}'
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:268  lock_sha256 = hashlib.sha256(lock_path.read_bytes()).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:269  if lock_sha256 != manifest.package_lock_sha256:
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:271  f'prebuilt package-lock.json SHA-256 mismatch: expected {manifest.package_lock_sha256}, got {lock_sha256}'
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:278  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/extensions/agents/dsh/prebuilt.py:310  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/extensions/agents/cc_search_agent_whitebox/tools/backend.py:124  # Summary model (HMAC-based LLM extraction, same as visit.py)
+  /nix/runtime/nexus/nexus/extensions/agents/cc_search_agent_whitebox/tools/backend.py:161  """Generate HMAC auth headers (same as visit.py get_simple_auth)."""
+  /nix/runtime/nexus/nexus/extensions/agents/cc_search_agent_whitebox/tools/backend.py:177  """Call trpc-gpt-eval LLM server with HMAC auth (mirrors visit.py call_llm_server)."""
+  /nix/runtime/nexus/nexus/extensions/agents/cc_search_agent_whitebox/tools/backend.py:672  # ---- Summary model (HMAC-based, from env vars like visit.py) ----
+  /nix/runtime/nexus/nexus/extensions/agents/cc_search_agent_whitebox/tools/backend.py:822  """True when at least one HMAC summary model credential is configured."""
+  /nix/runtime/nexus/nexus/extensions/agents/cc_search_agent_whitebox/tools/backend.py:827  """Call the summary LLM via HMAC auth (same pattern as visit.py).
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/parse_cache.py:6  本模块以【文件内容的 sha256】为 key，把 parse_file 返回的纯文本结果
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/parse_cache.py:22  {sha256, filename, suffix, parser_version, parse_result}
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/parse_cache.py:82  def content_sha256(raw: bytes) -> str:
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/parse_cache.py:83  """文件字节的 sha256 十六进制字符串。"""
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/parse_cache.py:84  return hashlib.sha256(raw).hexdigest()
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/parse_cache.py:123  'sha256': sha,
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/skill_tools/image_generation/mock_tools.py:49  gen_id = hashlib.sha256(f'seed={req.seed}'.encode()).hexdigest()[:12]
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/skill_tools/image_generation/_real_backend.py:102  sha256_bytes = hashlib.sha256(seed).digest()  # 32 bytes
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/skill_tools/image_generation/_real_backend.py:107  tag = _base62(sha256_bytes[16:20], 4)  # mixed case
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/skill_tools/image_generation/_real_backend.py:111  ak_body = _base62(sha256_bytes, 32)
+  /nix/runtime/nexus/nexus/extensions/agents/yb_one_agent/skill_tools/image_generation/_real_backend.py:126  host = hosts[sha256_bytes[0] % len(hosts)]
+  /nix/runtime/nexus/nexus/extensions/agents/claude_code/installer.py:542  sha256 = hashlib.sha256()
+  /nix/runtime/nexus/nexus/extensions/agents/claude_code/installer.py:545  sha256.update(chunk)
+  /nix/runtime/nexus/nexus/extensions/agents/claude_code/installer.py:546  actual = sha256.hexdigest()
+  /nix/runtime/nexus/nexus/extensions/agents/claude_code/interactive/hooks.py:97  return hashlib.sha256(interaction_id.encode('utf-8')).hexdigest()[:32]
+  /nix/runtime/nexus/nexus/extensions/agents/local_one_agent/permission_engine.py:173  'sha256sum',
+  /nix/runtime/nexus/nexus/extensions/projects/code_mt/task/reward_hacking/_vendored_swe/signals.py:168  r'file|wc|diff|unzip|jar\s+xf|7z|python3?\s+-m\s+zipfile|md5sum|sha256sum)\b',
+  /nix/runtime/nexus/nexus/extensions/projects/r2_stem/evaluator/common.py:16  repository, separator, _digest = verifier_image.rpartition('@sha256:')
+  /nix/runtime/nexus/nexus/extensions/projects/r2_stem/evaluator/common.py:18  raise ValueError('verifier_image must use an explicit registry and sha256 digest')
+  /nix/runtime/nexus/nexus/extensions/projects/r2_stem/evaluator/verifier_image.py:35  IMAGE_DIGEST_RE = re.compile(r'^.+@sha256:[0-9a-fA-F]{64}$')
+  /nix/runtime/nexus/nexus/extensions/projects/r2_stem/evaluator/verifier_image.py:74  suffix = hashlib.sha256(value.encode()).hexdigest()[:12]
+  /nix/runtime/nexus/nexus/extensions/projects/r2_stem/evaluator/verifier_image.py:136  raise ValueError(f'verifier_image must be pinned by sha256 digest: {verifier_image!r}')
+  /nix/runtime/nexus/nexus/extensions/projects/yb_search/tool_proxy_client.py:195  sign = hmac.new(sk.encode(), plain, hashlib.sha256).digest()
+  /nix/runtime/nexus/nexus/extensions/projects/yb_search/tool_proxy_client.py:197  sign = plain + hmac.new(sk.encode(), b'', hashlib.sha256).digest()
+  /nix/runtime/nexus/nexus/utils/tool_analyzer.py:535  'sha256sum',
+  /nix/runtime/nexus/nexus/utils/tool_analyzer.py:667  'sha256sum',
+  /nix/runtime/nexus/nexus/utils/cos.py:411  sign_key = hmac.new(self._secret_key.encode(), key_time.encode(), hashlib.sha1).hexdigest()
+  /nix/runtime/nexus/nexus/utils/cos.py:412  signature = hmac.new(sign_key.encode(), string_to_sign.encode(), hashlib.sha1).hexdigest()
+  /nix/runtime/nexus/nexus/runtime/server/venv/manager.py:618  if artifact.whl_sha256:
+  /nix/runtime/nexus/nexus/runtime/server/venv/manager.py:619  digest = hashlib.sha256()
+  /nix/runtime/nexus/nexus/runtime/server/venv/manager.py:624  if actual != artifact.whl_sha256:
+  /nix/runtime/nexus/nexus/runtime/server/venv/manager.py:625  raise ValueError(f'SHA-256 mismatch for {artifact.name}: expected {artifact.whl_sha256}, got {actual}')
+  /nix/runtime/nexus/nexus/runtime/server/venv/models.py:17  whl_sha256: str | None = Field(None, description='SHA-256 checksum for integrity verification')
+  /nix/runtime/nexus/nexus/runtime/client/packaging.py:52  h = hashlib.sha256()
+  /nix/runtime/nexus/nexus/runtime/client/packaging.py:694  """Generate a single RECORD line: ``path,sha256=...,size``."""
+  /nix/runtime/nexus/nexus/runtime/client/packaging.py:695  digest = hashlib.sha256(data).digest()
+  /nix/runtime/nexus/nexus/runtime/client/packaging.py:697  return f'{arcname},sha256={b64},{len(data)}'
+  /nix/runtime/nexus/nexus/runtime/bridge/artifacts.py:270  h = hashlib.sha256()
+  /data/workspace/push_bypass/nexus/extensions/agents/local_one_agent/permission_engine.py:173  'sha256sum',
+
+=== CSRF / TAI IDENTITY ===
+
+  /nix/runtime/nexus/nexus/distributed/gateways/control/app.py:14  from nexus.distributed.access.taihu import parse_tai_identity
+  /nix/runtime/nexus/nexus/distributed/gateways/control/app.py:99  identity = parse_tai_identity(raw)
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:12  from nexus.distributed.access.auth import auth_context, csrf_token
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:13  from nexus.distributed.access.taihu import parse_tai_identity
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:134  'csrf_token': csrf_token(context, request.app[CONFIG_KEY]),
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:379  if context.auth_type != 'tai_identity':
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:394  if context.auth_type not in {'tai_identity', 'disabled'}:
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:410  if context.auth_type != 'tai_identity':
+  /nix/runtime/nexus/nexus/distributed/gateways/control/routes/access.py:474  identity = parse_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/live_compatibility.py:26  from nexus.distributed.access.taihu import SGW_AUTH_HEADERS, TAI_IDENTITY_HEADER
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/live_compatibility.py:83  TAI_IDENTITY_HEADER,
+  /nix/runtime/nexus/nexus/distributed/gateways/application/routes/live_compatibility.py:606  if context.auth_type == 'tai_identity':
+  /nix/runtime/nexus/nexus/distributed/config/model.py:241  tai_identity_issuer: str = 'tai'
+  /nix/runtime/nexus/nexus/distributed/config/model.py:242  tai_identity_tenant: str = 'default'
+  /nix/runtime/nexus/nexus/distributed/config/model.py:529  and len(self.read_tai_application_token().encode('utf-8')) != 32
+  /nix/runtime/nexus/nexus/distributed/config/model.py:590  def read_tai_application_token(self) -> str:
+  /nix/runtime/nexus/nexus/distributed/config/model.py:591  return self.secrets.read_tai_application_token()
+  /nix/runtime/nexus/nexus/distributed/config/secrets.py:71  tai_application_token: SecretStr | None = None
+  /nix/runtime/nexus/nexus/distributed/config/secrets.py:99  def read_tai_application_token(self) -> str:
+  /nix/runtime/nexus/nexus/distributed/config/secrets.py:100  if self.tai_application_token is None:
+  /nix/runtime/nexus/nexus/distributed/config/secrets.py:102  return self.tai_application_token.get_secret_value()
+  /nix/runtime/nexus/nexus/distributed/instance_manager/internal.py:98  'x-csrf-token',
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:15  TAI_IDENTITY_HEADER,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:16  decrypt_tai_identity,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:97  CSRF_HEADER = 'X-Nexus-CSRF-Token'
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:101  WEBSOCKET_CSRF_PROTOCOL_PREFIX = 'nexus-csrf.'
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:155  raw_identity = request.headers.get(TAI_IDENTITY_HEADER)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:171  return await _authenticate_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:181  async def _authenticate_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:188  application_token = config.read_tai_application_token()
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:190  raise PermissionError('tai_identity_unavailable') from exc
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:191  identity = decrypt_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:193  application_token=application_token,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:194  issuer=config.tai_identity_issuer,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:195  tenant=config.tai_identity_tenant,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:233  application_token = config.read_tai_application_token()
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:242  app_id = verify_sgw_backend_signature(request.headers, application_token=application_token)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:305  auth_type='tai_identity',
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:339  def csrf_token(context: AuthContext, config: DistributedConfig) -> str | None:
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:340  if context.auth_type != 'tai_identity' or context.internal_delegation:
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:343  key = config.read_tai_application_token()
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:345  raise RuntimeError('csrf_key_unavailable') from exc
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:346  return hmac.new(key.encode(), f'nexus-csrf:v1\0{context.principal_id}'.encode(), hashlib.sha256).hexdigest()
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:358  if not protocol.startswith(WEBSOCKET_CSRF_PROTOCOL_PREFIX)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:384  context.auth_type != 'tai_identity'
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:401  csrf_protocols = [
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:404  if protocol.startswith(WEBSOCKET_CSRF_PROTOCOL_PREFIX)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:406  if not csrf_protocols:
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:407  raise web.HTTPForbidden(text='csrf_token_required')
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:408  if len(csrf_protocols) != 1:
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:409  raise web.HTTPForbidden(text='invalid_csrf_token')
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:410  supplied_token = csrf_protocols[0][len(WEBSOCKET_CSRF_PROTOCOL_PREFIX) :]
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:412  supplied_token = request.headers.get(CSRF_HEADER)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:414  raise web.HTTPForbidden(text='csrf_token_required')
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:415  expected_token = csrf_token(context, config)
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:417  raise web.HTTPForbidden(text='invalid_csrf_token')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:26  TAI_IDENTITY_HEADER = 'x-tai-identity'
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:39  _TAI_IDENTITY_EXPIRATION_LEEWAY = timedelta(minutes=3)
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:54  def parse_tai_identity(raw: str, *, default_issuer: str = 'tai') -> TaihuIdentity:
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:80  def decrypt_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:83  application_token: str,
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:88  key = application_token.encode('utf-8')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:90  raise PermissionError('invalid_tai_application_token')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:93  raise PermissionError('invalid_tai_identity')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:98  raise PermissionError('invalid_tai_identity') from exc
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:100  raise PermissionError('invalid_tai_identity_algorithm')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:106  raise PermissionError('invalid_tai_identity') from exc
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:108  raise PermissionError('invalid_tai_identity')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:113  raise PermissionError('invalid_tai_identity') from exc
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:115  raise PermissionError('invalid_tai_identity')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:117  expiration = _tai_identity_expiration(payload.get('Expiration'))
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:121  if current > expiration + _TAI_IDENTITY_EXPIRATION_LEEWAY:
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:122  raise PermissionError('expired_tai_identity')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:127  raise PermissionError('invalid_tai_identity_staff_id')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:129  raise PermissionError('invalid_tai_identity_login_name')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:150  application_token: str,
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:159  if not application_token or len(timestamp) > 20 or not timestamp.isascii() or not timestamp.isdecimal():
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:175  expected = hashlib.sha256(f'{timestamp}{application_token}{sequence}{timestamp}'.encode()).hexdigest().upper()
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:221  def _tai_identity_expiration(value: Any) -> datetime:
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:223  raise PermissionError('invalid_tai_identity_expiration')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:227  raise PermissionError('invalid_tai_identity_expiration') from exc
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:229  raise PermissionError('invalid_tai_identity_expiration')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:260  'TAI_IDENTITY_HEADER',
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:262  'decrypt_tai_identity',
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:265  'parse_tai_identity',
+  /nix/runtime/nexus/nexus/distributed/instance_manager/internal.py:101  'x-tai-identity',
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:16  decrypt_tai_identity,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:21  verify_sgw_backend_signature,
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:191  identity = decrypt_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/access/auth.py:242  app_id = verify_sgw_backend_signature(request.headers, application_token=application_token)
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:26  TAI_IDENTITY_HEADER = 'x-tai-identity'
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:27  SGW_CALLER_APP_ID_HEADER = 'x-rio-paasid'
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:30  'x-rio-nonce',
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:31  'x-rio-signature',
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:32  'x-rio-timestamp',
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:34  SGW_BACKEND_AUTH_HEADERS = frozenset({'timestamp', 'x-rio-seq', 'signature'})
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:80  def decrypt_tai_identity(
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:147  def verify_sgw_backend_signature(
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:157  sequence = _required_header(headers, 'x-rio-seq')
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:262  'decrypt_tai_identity',
+  /nix/runtime/nexus/nexus/distributed/access/taihu.py:269  'verify_sgw_backend_signature',
+  /nix/runtime/nexus/nexus/utils/artifact/auth.py:28  # to the Taihu MCP gateway, which validates it and injects ``x-tai-identity``.
+  /nix/runtime/nexus/nexus/utils/artifact/client.py:72  # authenticates the caller (Bearer PAT or OAuth) and injects ``x-tai-identity``

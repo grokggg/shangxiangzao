@@ -1,0 +1,10 @@
+[supervisord]
+nodaemon=true
+user=root
+logfile=/dev/stdout
+logfile_maxbytes=0
+pidfile=/run/yb/supervisord.pid
+childlogdir=/run/yb
+
+[include]
+files=/opt/yb/supervisor/conf.d/*.conf
