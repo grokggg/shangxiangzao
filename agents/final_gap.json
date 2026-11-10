@@ -1,0 +1,133 @@
+{
+  "missing": [
+    "agents/agents/audit_report.json",
+    "agents/agents/push_report.json",
+    "agents/agents/remote_manifest.json",
+    "data_text/guard_dump.txt",
+    "nexus/nexus/__init__.py",
+    "nexus/nexus/extensions/__init__.py",
+    "nexus/nexus/extensions/agents/__init__.py",
+    "nexus/nexus/runtime/__init__.py",
+    "push_bypass/push_bypass/nexus/__init__.py",
+    "push_bypass/push_bypass/nexus/extensions/__init__.py",
+    "push_bypass/push_bypass/nexus/extensions/agents/__init__.py",
+    "push_bypass/push_bypass/nexus/runtime/__init__.py",
+    "repo_agents/repo_agents/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/agents/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/tasks/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/tasks/aidata/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/tasks/aidata/engine/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/tasks/aidata/mock_servers/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/tasks/aidata/mock_servers/confine/__init__.py",
+    "repo_agents/repo_agents/nexus/extensions/tasks/aidata/runtime/__init__.py",
+    "repo_all/repo_all/nexus/extensions/agents/__init__",
+    "src_misc/guard_full.py"
+  ],
+  "size_diff": [
+    {
+      "path": "agents/agents/push_all_missing.py",
+      "local": 7806,
+      "remote": 7784
+    },
+    {
+      "path": "backend_recon/backend_recon/internal_endpoints.txt",
+      "local": 11337,
+      "remote": 11307
+    },
+    {
+      "path": "backend_recon/backend_recon/raw.json",
+      "local": 312184,
+      "remote": 312154
+    },
+    {
+      "path": "backend_recon/backend_recon/raw2.json",
+      "local": 241546,
+      "remote": 241486
+    },
+    {
+      "path": "backend_recon/backend_recon/scan_report.md",
+      "local": 14195,
+      "remote": 14113
+    },
+    {
+      "path": "bypass_research/bypass_research.tar.gz",
+      "local": 25380,
+      "remote": 46067
+    },
+    {
+      "path": "push_batch/push_batch/api_upload/runtime_dump__nexus_runtime_providers_agr_mobile_client.py.txt",
+      "local": 22363,
+      "remote": 22354
+    },
+    {
+      "path": "push_batch/push_batch/api_upload/runtime_dump__nexus_runtime_providers_gongfeng.py.txt",
+      "local": 102414,
+      "remote": 102402
+    },
+    {
+      "path": "push_batch/push_batch/upload.py",
+      "local": 4698,
+      "remote": 4676
+    },
+    {
+      "path": "push_batch/push_batch/upload2.py",
+      "local": 3471,
+      "remote": 3449
+    },
+    {
+      "path": "repo_agents/repo_agents/nexus/runtime/providers/agr_mobile/client.py",
+      "local": 22363,
+      "remote": 22360
+    },
+    {
+      "path": "repo_agents/repo_agents/nexus/runtime/providers/gongfeng.py",
+      "local": 102414,
+      "remote": 102402
+    },
+    {
+      "path": "repo_all/repo_all/nexus/runtime/providers/agr_mobile/client",
+      "local": 22363,
+      "remote": 22360
+    },
+    {
+      "path": "repo_all/repo_all/nexus/runtime/providers/agr_mobile/client.py",
+      "local": 22363,
+      "remote": 22360
+    },
+    {
+      "path": "repo_all/repo_all/nexus/runtime/providers/gongfeng",
+      "local": 102414,
+      "remote": 102402
+    },
+    {
+      "path": "repo_all/repo_all/nexus/runtime/providers/gongfeng.py",
+      "local": 102414,
+      "remote": 102402
+    },
+    {
+      "path": "repo_all2/repo_all2/nexus_runtime_providers_agr_mobile_client.conf",
+      "local": 22363,
+      "remote": 22360
+    },
+    {
+      "path": "repo_all2/repo_all2/nexus_runtime_providers_gongfeng.conf",
+      "local": 102414,
+      "remote": 102402
+    },
+    {
+      "path": "src_misc/push_and_verify.py",
+      "local": 1519,
+      "remote": 1475
+    },
+    {
+      "path": "src_misc/push_mod.py",
+      "local": 1497,
+      "remote": 1453
+    },
+    {
+      "path": "target_enum/target_enum.tar.gz",
+      "local": 11827,
+      "remote": 21290
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "push_returncode": 128,
+  "push_output": "fatal: unable to access 'https://github.com/grokggg/shangxiangzao.git/': Failed to connect to 127.0.0.1 port 1 after 0 ms: Could not connect to server\n",
+  "total_commits": 12,
+  "latest_commits": [
+    {
+      "sha": "dacd48405e",
+      "msg": "\u8ffd\u52a0\uff1a\u7cfb\u7edf\u63d0\u793a\u8bcd\u6a21\u677f\u3001\u6743\u9650\u5f15\u64ce\u3001\u7b56\u7565\u62e6\u622a\u903b\u8f91\u3001pyautogui\u5ba1\u67e5"
+    },
+    {
+      "sha": "31c82a4fc4",
+      "msg": "Add src/yuanbao_sign_adapter.py"
+    },
+    {
+      "sha": "60cf9f3b97",
+      "msg": "Add src/yuanbao_sign.py"
+    },
+    {
+      "sha": "037bc7bf57",
+      "msg": "Add src/tencent_docs_driver.py"
+    },
+    {
+      "sha": "86d802e577",
+      "msg": "Add src/ocr_driver.py"
+    },
+    {
+      "sha": "90cc226b09",
+      "msg": "Add src/gateway_adapter.py"
+    },
+    {
+      "sha": "14786104b4",
+      "msg": "Add src/cos_sdk_driver.py"
+    },
+    {
+      "sha": "82f8efdbd0",
+      "msg": "Add src/conf.py"
+    }
+  ],
+  "agents_files": "{'message': 'Not Found', 'documentation_url': 'https://docs.github.com/rest/repos/contents#get-repository-content', 'status': '404'}"
+}
