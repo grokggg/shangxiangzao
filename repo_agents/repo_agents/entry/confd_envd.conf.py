@@ -1,0 +1,15 @@
+[program:envd]
+command=/opt/yb/bin/start-envd
+priority=10
+autostart=true
+autorestart=true
+startsecs=2
+startretries=3
+stopsignal=TERM
+stopwaitsecs=30
+stopasgroup=true
+killasgroup=true
+stdout_logfile=/dev/stdout
+stdout_logfile_maxbytes=0
+stderr_logfile=/dev/stderr
+stderr_logfile_maxbytes=0
