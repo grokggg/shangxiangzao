@@ -1,0 +1,30 @@
+#!/bin/bash
+set -Eeuo pipefail
+# Preserve the existing per-file output limit across supervised processes.
+limit="${NEXUS_ULIMIT_FSIZE_BLOCKS:-204800}"
+if [[ "$limit" != unlimited ]]; then
+  ulimit -f "$limit"
+fi
+mkdir -p /run/yb /var/lib/yb-sandboxd /data/workspace /data/inputs /data/outputs /data/skills
+# Snapshot restore may attach Wiki storage after processes start.
+# sandboxd ensures Wiki files on use; readiness must not wait for that volume.
+/usr/bin/supervisord -n -c /opt/yb/supervisor/supervisord.conf &
+supervisor_pid=$!
+readiness_pid=
+cleanup() {
+  if [[ -n "$readiness_pid" ]]; then
+    kill -TERM "$readiness_pid" 2>/dev/null || true
+    wait "$readiness_pid" 2>/dev/null || true
+  fi
+  kill -TERM "$supervisor_pid" 2>/dev/null || true
+  wait "$supervisor_pid" 2>/dev/null || true
+}
+trap cleanup EXIT
+trap 'exit 143' TERM
+trap 'exit 130' INT
+/usr/bin/python3 /opt/yb/bin/runtime-readiness.py --wait --supervisor-pid "$supervisor_pid" &
+readiness_pid=$!
+wait "$readiness_pid"
+readiness_pid=
+echo 'envd listening, sandboxd READY and Nexus health ok'
+wait "$supervisor_pid"

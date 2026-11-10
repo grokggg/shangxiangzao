@@ -1,0 +1,8 @@
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                          
+LISTEN 0      4096         0.0.0.0:57890      0.0.0.0:*                                    
+LISTEN 0      128          0.0.0.0:57891      0.0.0.0:*                                    
+LISTEN 0      2048         0.0.0.0:20000      0.0.0.0:*    users:(("python",pid=685,fd=12))
+LISTEN 0      4096               *:49983            *:*    users:(("envd",pid=5,fd=3))     
+LISTEN 0      4096               *:32000            *:*                                    
+LISTEN 0      4096               *:32001            *:*                                    
+LISTEN 0      4096               *:20001            *:*    users:(("sandboxd",pid=6,fd=3)) 
