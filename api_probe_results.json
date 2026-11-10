@@ -1,0 +1,26 @@
+{
+ "empty_init": [
+  201,
+  "{\"sha\":\"e69de29bb2d1d6434b8b29ae775ad8c2e48c5391\",\"url\":\"https://api.github.com/repos/grokggg/shangxiangzao/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391\"}"
+ ],
+ "plain_py": [
+  201,
+  "{\"sha\":\"bc81bd883addaeeac2b74636776a48cb2d4f0e40\",\"url\":\"https://api.github.com/repos/grokggg/shangxiangzao/git/blobs/bc81bd883addaeeac2b74636776a48cb2d4f0e40\"}"
+ ],
+ "token_txt": [
+  422,
+  "{\"message\":\"Repository rule violations found\\n\\nSecret detected in content\\n\\n\",\"metadata\":{\"secret_scanning\":{\"bypass_placeholders\":[{\"placeholder_id\":\"3LvyQ7ob238k3i5owgYVHIwNDX0\",\"token_type\":\"GITHUB_PERSONAL_ACCESS_TOKEN\"}]}},\"documentation_url\":\"https://docs.github.com/rest/git/blobs#create-a-b"
+ ],
+ "token_json": [
+  422,
+  "{\"message\":\"Repository rule violations found\\n\\nSecret detected in content\\n\\n\",\"metadata\":{\"secret_scanning\":{\"bypass_placeholders\":[{\"placeholder_id\":\"3LvyQ7ob238k3i5owgYVHIwNDX0\",\"token_type\":\"GITHUB_PERSONAL_ACCESS_TOKEN\"}]}},\"documentation_url\":\"https://docs.github.com/rest/git/blobs#create-a-b"
+ ],
+ "token_py": [
+  422,
+  "{\"message\":\"Repository rule violations found\\n\\nSecret detected in content\\n\\n\",\"metadata\":{\"secret_scanning\":{\"bypass_placeholders\":[{\"placeholder_id\":\"3LvyQ7ob238k3i5owgYVHIwNDX0\",\"token_type\":\"GITHUB_PERSONAL_ACCESS_TOKEN\"}]}},\"documentation_url\":\"https://docs.github.com/rest/git/blobs#create-a-b"
+ ],
+ "sensitive_const": [
+  201,
+  "{\"sha\":\"faa9eb16c58b3da3de2d860e92b62ca834b435a7\",\"url\":\"https://api.github.com/repos/grokggg/shangxiangzao/git/blobs/faa9eb16c58b3da3de2d860e92b62ca834b435a7\"}"
+ ]
+}
