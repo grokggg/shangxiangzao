@@ -1,0 +1,428 @@
+[
+ {
+  "path": "nexus/core/context.py",
+  "size": 34556,
+  "sha256": "ab1ae42207d4aa799a1d7f2c3514d43b93bd16289685daa371bfe11a29ca328f",
+  "sha1": "6801d3420140a155b567c1df719871995dfec94d"
+ },
+ {
+  "path": "nexus/core/dep_checker.py",
+  "size": 4904,
+  "sha256": "78ad1d4511ca3c339116088ea0ea1b28a1936523ad2f3749f9c4a57800a43568",
+  "sha1": "5d0f1d7af1d1b1b499a0255fee0c2df2ba21aeac"
+ },
+ {
+  "path": "nexus/core/module_meta.py",
+  "size": 23463,
+  "sha256": "c435739b6f9d7542c1488cc6a5bedfb0e543e9379b9b122f9d1fec3a6a5e31fb",
+  "sha1": "dc6f9acb82b77b074140b1fc5888de5ae5b6fe4a"
+ },
+ {
+  "path": "nexus/core/module_registry.py",
+  "size": 5786,
+  "sha256": "869118d0e7775121e239bd5fea8b79731c306ce65da09fc3876964720b8906c5",
+  "sha1": "573a7f1303ffc3d8546d16aad7e512889be16713"
+ },
+ {
+  "path": "nexus/core/registry.py",
+  "size": 14241,
+  "sha256": "5948b62bcc4340b6339b9f31ebf654e42c72eb2b162861271f563d7d8eb597c2",
+  "sha1": "2688688d2fae084072d95579164d7503e49ee544"
+ },
+ {
+  "path": "nexus/core/tool/executor.py",
+  "size": 27060,
+  "sha256": "67944dffd181e872ac6a30975e1a832c8e19797a9645396f1a8a5ab6662d6fd5",
+  "sha1": "1abba079f6757d537cb94c97900aee8e83594228"
+ },
+ {
+  "path": "ps.py",
+  "size": 2911,
+  "sha256": "abe236ce95bf5c31cd93b387a5c1accda8356d3789facd5916cb832c731c8049",
+  "sha1": "cbc65f563ea2a96ef17b1b23d1b91533a73060ef"
+ },
+ {
+  "path": "nexus/gateway/backend.py",
+  "size": 16594,
+  "sha256": "10776bc0dc77b71eb49ebfccbb88115115581f9f3cb41b502b427d00b16f750c",
+  "sha1": "d2a31daa7458e32f859382b908cd12ea312201a2"
+ },
+ {
+  "path": "nexus/gateway/client.py",
+  "size": 30680,
+  "sha256": "f93767dd87ec1859d661ca78f48a6c6552657c042b261c91e95fcef4daaf54ce",
+  "sha1": "c39b4ff5883b6134e38b3c1390e37b8ec6e56fde"
+ },
+ {
+  "path": "nexus/gateway/nexus_run_tracker.py",
+  "size": 11852,
+  "sha256": "cd9d0d8627bbbb40448e025d013e4320a994e523627dd79092f4fcc4631b4df5",
+  "sha1": "09f67f79717816f0d88e809f4960a32ff2891add"
+ },
+ {
+  "path": "nexus/gateway/processor.py",
+  "size": 31815,
+  "sha256": "91cf15d58fdd6185be36f3d531670046e90be6b49fa6c01187b629feaf8f1714",
+  "sha1": "fe652b0be5bd90c34733dd646a24845e95979eec"
+ },
+ {
+  "path": "nexus/gateway/session_manager.py",
+  "size": 4612,
+  "sha256": "73a2db59ade89462afacf38e93c3e10d492828e4d1b73553a28f8d004de33109",
+  "sha1": "8da3524847c87cffd4989d75de4349f8c61b22da"
+ },
+ {
+  "path": "nexus/gateway/trajectory.py",
+  "size": 82054,
+  "sha256": "73b6e0d2a4f02faf226f985d85519b7050d24eb23c0437ed1cb84d1eda010cb4",
+  "sha1": "81f06f0cfbacdcae6c41d52013bd4371d8a57a5f"
+ },
+ {
+  "path": "nexus/extensions/__init__.py",
+  "size": 297,
+  "sha256": "7cd99c88c2f03fda13e28d591c392f897d93681ca07fa22dde370a67ee7ba480",
+  "sha1": "4d4147bddcab4e4c653b6bfaaa93cfca23c2aee2"
+ },
+ {
+  "path": "nexus/extensions/agents/local_one_agent/__init__.py",
+  "size": 1248,
+  "sha256": "73d47066c9c7149cd83331bf580098303e01caff3124ccd0de8363fb44662fc9",
+  "sha1": "a78ebb4389fccf4ecee9e1568d304d64bd942db0"
+ },
+ {
+  "path": "nexus/extensions/agents/yb_one_agent/__init__.py",
+  "size": 2865,
+  "sha256": "1a2d58e35edd78e4181b5555c8109c2fa5b42354206cd28416f0f0b5c605dea7",
+  "sha1": "bb3372b3e58a07df29535eb79ad5dc03b6b52a06"
+ },
+ {
+  "path": "nexus/runtime/accounts/__init__.py",
+  "size": 1574,
+  "sha256": "7bf7188a661088d1e899f0896274b73345e65042b7a282c29328d426d420e140",
+  "sha1": "c064615de79764e2f46b7603803a5fdf42b4d703"
+ },
+ {
+  "path": "nexus/runtime/accounts/acquired.py",
+  "size": 3683,
+  "sha256": "377d734c84a8996d68932bdc7281acfb92a3907174da3a4074c110b85ae22b87",
+  "sha1": "c0110591048cd0262357f526e10e8de23fb6a0e8"
+ },
+ {
+  "path": "nexus/runtime/accounts/client.py",
+  "size": 16683,
+  "sha256": "f7738893d202ebf6c870c5cb38fca930d18654dcefdd8450abaffa41e8f08a71",
+  "sha1": "3f4e3ed2be6475a819f6b38c17b35a22371cd981"
+ },
+ {
+  "path": "nexus/runtime/accounts/exceptions.py",
+  "size": 869,
+  "sha256": "d79f3b1df051b8ec255318299838e0105826c011e6eb722d0c94df4e66af27c5",
+  "sha1": "4865e409c7166c1078d1cda27c1d4b71932d070f"
+ },
+ {
+  "path": "nexus/runtime/accounts/manager.py",
+  "size": 20459,
+  "sha256": "7617b4effd45fdcecc8b7090637a1f203c57f7732b81934e0e8b6aabef2053f0",
+  "sha1": "7e60efa882c258eb3311160e940bbe1d07980a07"
+ },
+ {
+  "path": "nexus/runtime/accounts/models.py",
+  "size": 3791,
+  "sha256": "e7e3a3b716bf90b3a1b2fa0ca614f1caa1458b5fca7c4348c2656efd986eb2a3",
+  "sha1": "c8b5b780167dbcd11239a999f0c03af1f62a4be2"
+ },
+ {
+  "path": "nexus/runtime/accounts/reservation.py",
+  "size": 3340,
+  "sha256": "460d832d521c86a095cdc4e0b76dc300fd8ee423fb1136a2638c894fcac0563a",
+  "sha1": "990b9136d907ba1283b3b786e373fef10214b66b"
+ },
+ {
+  "path": "nexus/runtime/bridge/host_client.py",
+  "size": 6767,
+  "sha256": "6f060bb5b489eb28627b868a33a501a3cbeaecff967dcdce8236cc735769246c",
+  "sha1": "5c1abb9e9c01a8895a6a331172a3f4a7f17feda3"
+ },
+ {
+  "path": "nexus/runtime/client/base.py",
+  "size": 39608,
+  "sha256": "642ca82e983a4f8f176709ec342991c87c4c6ed09a8330e349b6972076c129a4",
+  "sha1": "ce200789cbd67fe38c28f23bd7a64ac7586dd344"
+ },
+ {
+  "path": "nexus/runtime/client/local.py",
+  "size": 1518,
+  "sha256": "d268f1e224406aed2bb522398836a96e980686a0651a5bc015ca5639c5ca5690",
+  "sha1": "44c9e38d8a50cc9e3f7e6527bf12da86ae77b7f4"
+ },
+ {
+  "path": "nexus/runtime/client/models.py",
+  "size": 2764,
+  "sha256": "af3438969fd83ed3c13a59fd81c72a903dac6aab15577a39e3a66e1d3d4fc71e",
+  "sha1": "c1f32c32542e0b33ff542f0f5439c863a1d8b26e"
+ },
+ {
+  "path": "nexus/runtime/client/packaging.py",
+  "size": 24306,
+  "sha256": "5ebe97c125539702b1fbd211b7e36a7c0bdbf920d17bfd7becc27773e97edc43",
+  "sha1": "0b695322508c6c2a59943bbd30babbd1aae1771a"
+ },
+ {
+  "path": "nexus/runtime/client/remote.py",
+  "size": 41070,
+  "sha256": "3fc55afbc42e169b7253d39805a38460b2d8e221bda68a0d84a829ff4c948652",
+  "sha1": "4b5bfbcaa9b4fa0dfa0017f305e3e763be15b333"
+ },
+ {
+  "path": "nexus/runtime/context.py",
+  "size": 8455,
+  "sha256": "1e8af3b4c6a9f918f61a5b55be7dc58532f2cd21bd12dd8e4f52254f3c5fb32b",
+  "sha1": "06e0578e7c44c38005e644f34041b7b1418dc609"
+ },
+ {
+  "path": "nexus/runtime/executors/__init__.py",
+  "size": 651,
+  "sha256": "8bd4e2fbfb375ceeb0083806d2c64190b9770ec6b5f834c889a2de2b4ce86b10",
+  "sha1": "0abb90e66226a7cd6232d0b3fd157041c9f997bb"
+ },
+ {
+  "path": "nexus/runtime/executors/mcp.py",
+  "size": 9889,
+  "sha256": "cb4bd7f44ed275270f35ee172a80397320db9bed4b783271ba9c5fa32afc3efe",
+  "sha1": "9ee7fb5298ba62d6b2ff90853220c69380ae576f"
+ },
+ {
+  "path": "nexus/runtime/executors/models/__init__.py",
+  "size": 4086,
+  "sha256": "ae228deea0f17a30fa090a339afd5a3fc678aa58dfaf0e8fb3cef6def436c275",
+  "sha1": "83cf3ef2c703e6006893707d4e7f1fc5d1d54b81"
+ },
+ {
+  "path": "nexus/runtime/executors/models/browser.py",
+  "size": 22120,
+  "sha256": "7032353abed8a0c71e1cc308d97e34d7d5224f38c350c4b636b745a7b58aaf35",
+  "sha1": "d18ae461f0545df2385e2d2ab0cffd9b64868f48"
+ },
+ {
+  "path": "nexus/runtime/executors/models/command.py",
+  "size": 1097,
+  "sha256": "9c879d950ba4f68b4f4e2dc1a82ace5525c5b703c36cc584e038a2e7dfe36a94",
+  "sha1": "d2f88cf607366d4fd29e840c9e279ff9aa1366c3"
+ },
+ {
+  "path": "nexus/runtime/executors/models/file.py",
+  "size": 3110,
+  "sha256": "c298c79df59f03c184a307848cccdc1bf4c03f6efc423c06f314d39838aac715",
+  "sha1": "f53d1b39eb2395192176d1f0fc18dbc03411b56c"
+ },
+ {
+  "path": "nexus/runtime/executors/models/jupyter.py",
+  "size": 1830,
+  "sha256": "c47bac5f9a57437446795afdfbd75d7ea36fbcae7b5262bd6f346e595c63634e",
+  "sha1": "7114b4d27b166500061b850f752d71595db2651c"
+ },
+ {
+  "path": "nexus/runtime/executors/models/terminal.py",
+  "size": 3593,
+  "sha256": "5b7417d38105110a4383864f483fe2e822058b112c82bcc7429c943374e58cd7",
+  "sha1": "0424ec8e5b7e4df8d14db5ce60f050d5d9b2a152"
+ },
+ {
+  "path": "nexus/runtime/executors/terminal/builtin.py",
+  "size": 1457,
+  "sha256": "b643c932d8c2395704fcfffcb33b189402553e43f78399b0c9126b42c656015f",
+  "sha1": "4a034bacff83853f666c42c06430875112943634"
+ },
+ {
+  "path": "nexus/runtime/executors/terminal/pty_io.py",
+  "size": 10001,
+  "sha256": "658c57b4920b214a2643f150183b1561da8bec757b49342e25ca38ddfa2818ed",
+  "sha1": "54f8c4fed2af1e075d1e0ce3b1fea0efd309df4c"
+ },
+ {
+  "path": "nexus/runtime/executors/terminal/session.py",
+  "size": 13389,
+  "sha256": "3cda91b292fc7cb8ad464554fdd8b20da8af5b75098bfce79ebd33bf4f140554",
+  "sha1": "c503cbae9e0d99e7ba2bcad0f496cbcc3f485a4a"
+ },
+ {
+  "path": "nexus/runtime/models.py",
+  "size": 13889,
+  "sha256": "3e99677b2700271c4975396beabc43514e90e8dbcde7442f8af7a23069c03551",
+  "sha1": "cdf79c66a6aeb1e193498e6f31bb689fa8c05eee"
+ },
+ {
+  "path": "nexus/runtime/providers/ags/handle.py",
+  "size": 913,
+  "sha256": "f6e4630e80f0de28cc292449ff109e1895ce2eb57c011b22be72d02cc8694b28",
+  "sha1": "00ecbeaefdeb9f60e290facb58a3426fb8fc935b"
+ },
+ {
+  "path": "nexus/runtime/providers/ags/osworld.py",
+  "size": 15721,
+  "sha256": "249beebcf1af57a9110b0079c883df7777827923e0bcdf62d468bf8d9e9c84ac",
+  "sha1": "5198ab2bb9f9fd71317f9afad6c02727e3ab237a"
+ },
+ {
+  "path": "nexus/runtime/providers/ags/provider.py",
+  "size": 55229,
+  "sha256": "4ba8acb067a7ce627f15deafe18a76d31c258f0c7e6ee467b41af34fb47874d9",
+  "sha1": "2ea5d451fc2cf6eea86ef0dc5df58ce28cfe5374"
+ },
+ {
+  "path": "nexus/runtime/providers/ags/waa.py",
+  "size": 31819,
+  "sha256": "8cc4fe9edb0345777c7ff37553f1e964ba461d1f1abd88d3cf2412c6f638d79e",
+  "sha1": "6a9504a819b53ebd06bd4ae8725eefd09b120d97"
+ },
+ {
+  "path": "nexus/runtime/providers/android_cloudtest/client.py",
+  "size": 9447,
+  "sha256": "3f64543dbd6c0135807c349c1f34b842c48661d0d6076dd174a7b4aa81c1aa98",
+  "sha1": "32f44d5d825f6e53508236abc2156a7ec08141ea"
+ },
+ {
+  "path": "nexus/runtime/providers/android_websocket/client.py",
+  "size": 7659,
+  "sha256": "6476f9929a507ef49e7d691a7836a11a06c8eea1a746d35759b66bdd47680273",
+  "sha1": "7f295d5ee7b510ba9ebe65df866f8644b820975f"
+ },
+ {
+  "path": "nexus/runtime/providers/android_websocket/provider.py",
+  "size": 3377,
+  "sha256": "356e2ab72c2a42daded524667e8242e5d78bb35416244ea0abc499de8c1ca4ae",
+  "sha1": "78e474e7791f6df2648c12000d890d8bb15a72c5"
+ },
+ {
+  "path": "nexus/runtime/providers/android_world/client.py",
+  "size": 16133,
+  "sha256": "6d2c879b7f03eb1f63574a1a5ad76e7b024cbd846f61d1bea0f40f9e8071a459",
+  "sha1": "aa870bdb91009819cd2175ae469f125d97f85b1c"
+ },
+ {
+  "path": "nexus/runtime/providers/base.py",
+  "size": 5938,
+  "sha256": "c7e3f69960dd490d43f9a8d9fde3f8071416198ed5e34483de056d13e84879d1",
+  "sha1": "d0750f0b86ce76226082ba2b67bb11aec2988cdd"
+ },
+ {
+  "path": "nexus/runtime/providers/docker.py",
+  "size": 38240,
+  "sha256": "bdfd3bd92f5fe1a0f7368787437c5ddb8cdf154e6e173d8b25fd257b7d8d9003",
+  "sha1": "c88d811b6498d12061844528567cc13c5e51cedd"
+ },
+ {
+  "path": "nexus/runtime/providers/gongfeng.py",
+  "size": 102094,
+  "sha256": "a530cae7d8b257ae1f5ffd3d285631bb0228f8b02e81a74b2a9bae24de411c09",
+  "sha1": "13995f435491790b81f4423cdbc79e3d37b8b708"
+ },
+ {
+  "path": "nexus/runtime/providers/taiji.py",
+  "size": 10383,
+  "sha256": "8086f6dcffe62e7a417353373b76a156e8479c1386acb69b7bd281dda4ac0bb5",
+  "sha1": "e0b618e93d6cc25adaf581dd73a29cca06b2bfc0"
+ },
+ {
+  "path": "nexus/runtime/server/app.py",
+  "size": 71495,
+  "sha256": "65f23e10ccdfbd0a3741441023fce6d9f964bfe6458ffa44c8f25e121b20de45",
+  "sha1": "0135973c27015b0bc69397b86766af6df1aa1397"
+ },
+ {
+  "path": "nexus/runtime/server/backend.py",
+  "size": 2598,
+  "sha256": "1810d3ab92ee173565eeb9affa177412fe607777096777cee3c09dd58a739825",
+  "sha1": "b4c7cd065db13a5d2d84a70bbb6a8a0daace824f"
+ },
+ {
+  "path": "nexus/runtime/server/debug.py",
+  "size": 4239,
+  "sha256": "d400f7a7d070fd9c190b0e6cc283e963689d097978a4468477085ec0f86fe469",
+  "sha1": "b834195d7bf13a1ae16767a3fb832084cf652594"
+ },
+ {
+  "path": "nexus/runtime/server/services/anthropic_proxy/converter.py",
+  "size": 34465,
+  "sha256": "9cab79abf449598a2cc53777abb1f346999cce9ca73fc3b2b8a9cbdf0598f5b5",
+  "sha1": "60ce6530bd0c657f5aba5d6dd01998ae5024faed"
+ },
+ {
+  "path": "nexus/runtime/server/services/anthropic_proxy/server.py",
+  "size": 17325,
+  "sha256": "f678707df2166da0df6089fea0ad994e3e590a640bf49e6a76b5c3450b46904a",
+  "sha1": "bf61a7ccb73148e36dca0afc556868ca4e9801cd"
+ },
+ {
+  "path": "nexus/runtime/server/services/llm_handler.py",
+  "size": 42931,
+  "sha256": "dfa5f872c0b60d82f4d4c2f522c433958cee32beecad85635d35a11787d695bd",
+  "sha1": "9f6e6d106ab0d0e0b5511b7ff1ef7d442d882f4a"
+ },
+ {
+  "path": "nexus/runtime/server/services/openai_proxy.py",
+  "size": 12893,
+  "sha256": "9e9e75e6efbe998ec36c7655ec1d2ccf98467c664a0988485bef53a02757508e",
+  "sha1": "0f0a36cfda5ee7aed7329855f749506193be31d6"
+ },
+ {
+  "path": "nexus/runtime/server/services/responses_proxy/converter.py",
+  "size": 22779,
+  "sha256": "82e903da01d8ae61e1fa337344229a70a7d2906a00ba6cc0bc93034c8701a93f",
+  "sha1": "96383a00bd06f7f560e7bca6c9ac8bebe2915553"
+ },
+ {
+  "path": "nexus/runtime/server/services/rsio_llm_bridge.py",
+  "size": 11342,
+  "sha256": "beeb52bdfa7cc2b4c0ff334c341ea852b011b4f6249272232da0da39428c5162",
+  "sha1": "1c0c8a9f4240a1350da947531dc5111cb2a0f40b"
+ },
+ {
+  "path": "nexus/runtime/server/venv/manager.py",
+  "size": 33326,
+  "sha256": "1913986a1ae6f79b0dc02de76b6d035566fcae16c70ee20070e0715d66bbe7d5",
+  "sha1": "18c2722dce438e8f81b9fd58c5a2fb67a81c373d"
+ },
+ {
+  "path": "nexus/runtime/server/worker/launcher.py",
+  "size": 7912,
+  "sha256": "ee6e5012eb0b77f094d010f1dda0f3cb7751034535368795014cc1b3ee047c3b",
+  "sha1": "7825b063f53b165742d5dfbfa1aa7be18a918a4c"
+ },
+ {
+  "path": "nexus/runtime/server/worker/sdk.py",
+  "size": 14924,
+  "sha256": "ff7ae75f9434c92de1aeef3bcc2c0ff98cb87364e9b707df2f22d77eed859529",
+  "sha1": "2acd727accd911102d5aedbe1477ead27cdd6859"
+ },
+ {
+  "path": "nexus/extensions/agents/local_one_agent/permission_engine.py",
+  "size": 26282,
+  "sha256": "761c4d59e157f968840d401a8c3ac7b130ba363bc5f0cb215be996842ef1dc08",
+  "sha1": "cb7eced9821f7f063d470c490a26a2e3a1b51317"
+ },
+ {
+  "path": "nexus/extensions/agents/local_one_agent/sandbox.py",
+  "size": 6671,
+  "sha256": "d0aa1c3f7cb6aafb4b15ea7b81d726e609b9dd2dbe1d25d9380f883fa5fd9830",
+  "sha1": "37a093fd89eacc2c1af8e3d35e5e6479093fc500"
+ },
+ {
+  "path": "nexus/extensions/tasks/aidata/engine/sandbox.py",
+  "size": 389,
+  "sha256": "6024825ce06cf0248904c6e613528e32d74eb7cfc93ef15ccdab48a3211a9d83",
+  "sha1": "5d18b63bf0ebac9ab324495549f8f85584f6929a"
+ },
+ {
+  "path": "nexus/extensions/tasks/aidata/runtime/sandbox.py",
+  "size": 7315,
+  "sha256": "50dc269c6135b5badf6d638f4d79f31fd7f6a545da1189be25bfcc0ab85c788f",
+  "sha1": "8e3dbc1d43007232954f0a703498ad2a851d3706"
+ },
+ {
+  "path": "nexus/extensions/tasks/aidata/mock_servers/confine/libconfine.c.py",
+  "size": 43185,
+  "sha256": "7c0fa7bd596b6ecb1eb7702ba262029b71e21765df05a6a8419c653ee53e0af2",
+  "sha1": "f134823b8b09ff4580219ccdfd8144893c67e3c1"
+ }
+]
