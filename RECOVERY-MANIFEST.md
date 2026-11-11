@@ -1,17 +1,17 @@
 # 恢复说明 / RECOVERY MANIFEST
 
-本分支由历史推送记录自动重建，包含仓库所有曾经存在过的文件（共 3103 个文件，约 33.7 MB）。
+本分支由本仓库全部推送历史自动重建，包含所有曾经出现过的文件（3106 个，约 3106 路径）。
 
 ## 统计
 
-- 生成时间(UTC): 2026-11-10T23:59:09Z
-- 历史推送事件总数: 155（普通 push 71 / 强制覆盖 force_push 84）
-- 历史提交总数: 156
-- 当前 main 可达提交: 98
-- 已脱离所有分支、被覆盖丢失的提交: 58
-- 从 HEAD 缺失、本次恢复的文件数: 3101
+- 生成时间(UTC): 2026-11-11T00:16:50Z
+- 推送事件总数: 169（普通 push 80 / 强制覆盖 force_push 89）
+- 历史提交总数: 171
+- 当前各分支可达提交: 109
+- 被覆盖丢失(不再被任何分支引用)的提交: 62
+- 本分支文件数: 3106
 
-## 被覆盖(丢失)的提交
+## 被覆盖丢失的提交
 
 - `3d11f4b1196bc132a12237ca07ff14b718ac5907` 2026-11-10T22:20:48Z chore: 补推缺失数据分片 5 (80 文件)
 - `17d2c3975f585ca7552eed78475d027768adf914` 2026-11-10T22:22:47Z chore: 补推缺失数据分片 2 (80 文件)
@@ -71,7 +71,12 @@
 - `e03c902e199c676fcdc7ccdf2353a8990350b48b` 2026-11-10T23:13:43Z raw push batch 11: 40 files (no sanitize)
 - `0ea12e0cb11222ae4ef895b423bd51c2abd1a250` 2026-11-10T23:13:46Z raw push batch 9: 49 files (no sanitize)
 - `5c4f70caf5cb44901c2f06e914b7f718834c6d26` 2026-11-10T23:13:55Z raw push batch 3 (80 files, no sanitize)
+- `75ede15af1415b5b2eb145c2876357b37b28c27b` 2026-11-10T23:52:26Z nexus source batch 4 (80 files)
+- `12a4831507537b69f386070e3cec33a79c421fe9` 2026-11-10T23:55:42Z nexus source batch 3 (80 files)
+- `ebe57fb4b919789c4f43cc08614ae4370ec244bd` 2026-11-10T23:56:52Z nexus source batch 4 (80 files)
+- `39a1086ec426a2b4519b9739a8e227531de70454` 2026-11-10T23:59:54Z nexus source batch 4 (80 files)
 
-## 恢复分支
+## 说明
 
-- `recovery/all-data` (tree `4f3581b09b3daed343dd523c5eaabd28f0f228c2`) 基于 `3cb8278c6a21d2185b67942590569ebd2ac4591b`
+- `main` 分支未被修改；本分支基于上一恢复快照 `3b5aceb04769ffb58ab2b099fdf37c7673a245b0`。
+- 恢复方法：遍历推送事件(before/after SHA) → 收集全部提交与目录树 → 按路径取最新版本重建目录树。
